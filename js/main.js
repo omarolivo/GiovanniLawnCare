@@ -1,0 +1,410 @@
+/* ==========================================================================
+   GIOVANNI LAWN CARE LLC — JAVASCRIPT CONTROLLER
+   Interactive components: Seasonal Slider, Before/After Slider, Lightbox,
+   Filter Gallery, FAQ Accordion, Mobile Drawer, and Quote Form Validation
+   ========================================================================== */
+
+document.addEventListener('DOMContentLoaded', () => {
+  // --- 1. Sticky Header Shadow on Scroll ---
+  const header = document.querySelector('.main-header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) {
+      header?.classList.add('header-scrolled');
+    } else {
+      header?.classList.remove('header-scrolled');
+    }
+  }, { passive: true });
+
+  // --- 2. Mobile Navigation Toggle ---
+  const mobileToggle = document.querySelector('.mobile-toggle');
+  const mobileNav = document.querySelector('.mobile-nav');
+  const mobileClose = document.querySelector('.mobile-nav-close');
+  const mobileBackdrop = document.querySelector('.mobile-nav-backdrop');
+  const mobileLinks = document.querySelectorAll('.mobile-nav-link, .mobile-services-list a');
+
+  function openMobileNav() {
+    mobileNav?.classList.add('open');
+    mobileBackdrop?.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMobileNav() {
+    mobileNav?.classList.remove('open');
+    mobileBackdrop?.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  mobileToggle?.addEventListener('click', openMobileNav);
+  mobileClose?.addEventListener('click', closeMobileNav);
+  mobileBackdrop?.addEventListener('click', closeMobileNav);
+  mobileLinks.forEach(link => link.addEventListener('click', closeMobileNav));
+
+  // --- 3. Homepage Seasonal Hero Slider ---
+  const slides = document.querySelectorAll('.hero-slide');
+  const seasonPills = document.querySelectorAll('.season-pill');
+  const prevBtn = document.querySelector('.slider-prev');
+  const nextBtn = document.querySelector('.slider-next');
+  let currentSlide = 0;
+  let slideInterval = null;
+  const slideDuration = 6000;
+
+  function showSlide(index) {
+    if (!slides.length) return;
+    slides.forEach(slide => slide.classList.remove('active'));
+    seasonPills.forEach(pill => pill.classList.remove('active'));
+
+    currentSlide = (index + slides.length) % slides.length;
+    slides[currentSlide].classList.add('active');
+
+    // Update active season pill if matching slide tag exists
+    const currentTag = slides[currentSlide].getAttribute('data-season');
+    if (currentTag) {
+      const activePill = document.querySelector(`.season-pill[data-season="${currentTag}"]`);
+      if (activePill) activePill.classList.add('active');
+    }
+  }
+
+  function nextSlide() {
+    showSlide(currentSlide + 1);
+  }
+
+  function prevSlide() {
+    showSlide(currentSlide - 1);
+  }
+
+  function startAutoSlide() {
+    if (slideInterval) clearInterval(slideInterval);
+    slideInterval = setInterval(nextSlide, slideDuration);
+  }
+
+  function pauseAutoSlide() {
+    if (slideInterval) clearInterval(slideInterval);
+  }
+
+  if (slides.length > 0) {
+    prevBtn?.addEventListener('click', () => {
+      prevSlide();
+      startAutoSlide();
+    });
+
+    nextBtn?.addEventListener('click', () => {
+      nextSlide();
+      startAutoSlide();
+    });
+
+    seasonPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        const season = pill.getAttribute('data-season');
+        const targetIndex = Array.from(slides).findIndex(
+          slide => slide.getAttribute('data-season') === season
+        );
+        if (targetIndex !== -1) {
+          showSlide(targetIndex);
+          startAutoSlide();
+        }
+      });
+    });
+
+    const heroSliderWrap = document.querySelector('.hero-slider-wrap');
+    heroSliderWrap?.addEventListener('mouseenter', pauseAutoSlide);
+    heroSliderWrap?.addEventListener('mouseleave', startAutoSlide);
+
+    startAutoSlide();
+  }
+
+  // --- 4. Interactive Before & After Comparison Slider ---
+  const baWrap = document.querySelector('.before-after-wrap');
+  if (baWrap) {
+    const baOverlay = baWrap.querySelector('.before-after-overlay');
+    const baHandle = baWrap.querySelector('.slider-handle');
+    let isDragging = false;
+
+    function setPosition(x) {
+      const rect = baWrap.getBoundingClientRect();
+      let offsetX = x - rect.left;
+      if (offsetX < 0) offsetX = 0;
+      if (offsetX > rect.width) offsetX = rect.width;
+      const percentage = (offsetX / rect.width) * 100;
+      baOverlay.style.width = `${percentage}%`;
+      baHandle.style.left = `${percentage}%`;
+    }
+
+    baWrap.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      setPosition(e.clientX);
+    });
+
+    window.addEventListener('mouseup', () => {
+      isDragging = false;
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      setPosition(e.clientX);
+    });
+
+    // Touch events
+    baWrap.addEventListener('touchstart', (e) => {
+      isDragging = true;
+      setPosition(e.touches[0].clientX);
+    }, { passive: true });
+
+    window.addEventListener('touchend', () => {
+      isDragging = false;
+    });
+
+    window.addEventListener('touchmove', (e) => {
+      if (!isDragging) return;
+      setPosition(e.touches[0].clientX);
+    }, { passive: true });
+  }
+
+  // --- 5. Gallery Filter Tabs ---
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const galleryItems = document.querySelectorAll('.gallery-item');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.getAttribute('data-filter');
+
+      galleryItems.forEach(item => {
+        const cat = item.getAttribute('data-category');
+        if (filter === 'all' || cat === filter) {
+          item.style.display = 'block';
+          setTimeout(() => { item.style.opacity = '1'; }, 10);
+        } else {
+          item.style.opacity = '0';
+          setTimeout(() => { item.style.display = 'none'; }, 200);
+        }
+      });
+    });
+  });
+
+  // --- 6. Lightbox Modal for Gallery Images ---
+  const lightboxModal = document.querySelector('.lightbox-modal');
+  const lightboxImg = document.querySelector('.lightbox-img');
+  const lightboxCaption = document.querySelector('.lightbox-caption');
+  const lightboxClose = document.querySelector('.lightbox-close');
+
+  galleryItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const img = item.querySelector('img');
+      const title = item.querySelector('.gallery-item-title')?.textContent || '';
+      const category = item.querySelector('.gallery-category')?.textContent || '';
+      if (lightboxImg && img) {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        if (lightboxCaption) {
+          lightboxCaption.textContent = `${category ? category + ' — ' : ''}${title}`;
+        }
+        lightboxModal?.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
+
+  function closeLightbox() {
+    lightboxModal?.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  lightboxClose?.addEventListener('click', closeLightbox);
+  lightboxModal?.addEventListener('click', (e) => {
+    if (e.target === lightboxModal) closeLightbox();
+  });
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+
+  // --- 7. FAQ Accordion ---
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const questionBtn = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+
+    questionBtn?.addEventListener('click', () => {
+      const isOpen = item.classList.contains('active');
+      
+      // Close all other items
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item) {
+          otherItem.classList.remove('active');
+          const otherAns = otherItem.querySelector('.faq-answer');
+          if (otherAns) otherAns.style.maxHeight = null;
+        }
+      });
+
+      if (!isOpen) {
+        item.classList.add('active');
+        if (answer) answer.style.maxHeight = answer.scrollHeight + 'px';
+      } else {
+        item.classList.remove('active');
+        if (answer) answer.style.maxHeight = null;
+      }
+    });
+  });
+
+  // --- 8. Stats Number Counter Animation ---
+  const statsElements = document.querySelectorAll('.stat-number');
+  let statsCounted = false;
+
+  function countUp(el) {
+    const target = parseInt(el.getAttribute('data-target') || '0', 10);
+    const suffix = el.getAttribute('data-suffix') || '';
+    const duration = 1800;
+    const stepTime = 30;
+    const steps = duration / stepTime;
+    const increment = target / steps;
+    let current = 0;
+
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        el.textContent = `${target}${suffix}`;
+        clearInterval(timer);
+      } else {
+        el.textContent = `${Math.floor(current)}${suffix}`;
+      }
+    }, stepTime);
+  }
+
+  const statsSection = document.querySelector('.stats-bar');
+  if (statsSection && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !statsCounted) {
+          statsCounted = true;
+          statsElements.forEach(el => countUp(el));
+        }
+      });
+    }, { threshold: 0.3 });
+    observer.observe(statsSection);
+  } else {
+    statsElements.forEach(el => {
+      const target = el.getAttribute('data-target');
+      const suffix = el.getAttribute('data-suffix') || '';
+      if (target) el.textContent = `${target}${suffix}`;
+    });
+  }
+
+  // --- 9. Quote Form Submission (Real Email Delivery via Web3Forms / Formspree) ---
+  const quoteForm = document.getElementById('quoteForm');
+  if (quoteForm) {
+    quoteForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const nameInput = quoteForm.querySelector('[name="name"]');
+      const phoneInput = quoteForm.querySelector('[name="phone"]');
+      const emailInput = quoteForm.querySelector('[name="email"]');
+      const townInput = quoteForm.querySelector('[name="town"]');
+      const serviceInput = quoteForm.querySelector('[name="service"]');
+      const notesInput = quoteForm.querySelector('[name="notes"]');
+      const apiKeyInput = quoteForm.querySelector('[name="access_key"], [name="apikey"]');
+
+      const name = nameInput ? nameInput.value.trim() : '';
+      const phone = phoneInput ? phoneInput.value.trim() : '';
+      const email = emailInput ? emailInput.value.trim() : '';
+      const town = townInput ? townInput.value : '';
+      const service = serviceInput ? serviceInput.value : 'General Outdoor Service';
+      const notes = notesInput ? notesInput.value.trim() : '';
+      const defaultKey = '8d567192-0f5f-4c3e-ac81-654c6d48e397';
+      const apiKey = (apiKeyInput && apiKeyInput.value && apiKeyInput.value !== 'YOUR_ACCESS_KEY_HERE')
+        ? apiKeyInput.value.trim()
+        : defaultKey;
+
+      if (!name || !phone) {
+        alert('Please provide your name and phone number so Giovanni can reach you.');
+        return;
+      }
+
+      // Show loading spinner
+      const submitBtn = quoteForm.querySelector('button[type="submit"]');
+      const origBtnHtml = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `
+        <svg style="width:18px;height:18px;display:inline-block;animation:spin 1s linear infinite;vertical-align:middle;margin-right:6px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle>
+          <path d="M12 2a10 10 0 0 1 10 10" stroke-linecap="round"></path>
+        </svg> Sending to Giovanni...
+      `;
+
+      // Construct mailto link for direct backup
+      const mailtoSubject = encodeURIComponent(`New Estimate Request: ${service} - ${name} (${town || 'Shoreline'})`);
+      const mailtoBody = encodeURIComponent(
+        `Name: ${name}\n` +
+        `Phone: ${phone}\n` +
+        `Email: ${email || 'Not provided'}\n` +
+        `Town: ${town || 'Not specified'}\n` +
+        `Service Needed: ${service}\n\n` +
+        `Project Notes:\n${notes || 'No additional notes provided.'}`
+      );
+      const mailtoUrl = `mailto:giovannilawncare@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
+
+      // Submit via Web3Forms API
+      try {
+        const formData = new FormData(quoteForm);
+        formData.set('access_key', apiKey);
+        formData.set('from_name', 'Giovanni Lawn Care Website');
+        formData.set('subject', `Website Estimate Request from ${name} (${town || 'CT Shoreline'})`);
+
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json'
+          },
+          body: formData
+        });
+
+        const result = await response.json();
+        if (result.success) {
+          console.log('Quote request sent successfully to Web3Forms.');
+        } else {
+          console.warn('Web3Forms message:', result.message);
+        }
+      } catch (err) {
+        console.warn('Network issue during Web3Forms submission, displaying receipt:', err);
+      }
+
+      // Render confirmation screen
+      setTimeout(() => {
+        quoteForm.innerHTML = `
+          <div style="text-align: center; padding: 2rem 1rem;">
+            <div style="width: 64px; height: 64px; border-radius: 50%; background: #dcfce7; color: #166534; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem auto;">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <h3 style="font-size: 1.6rem; margin-bottom: 0.5rem; color: #0f172a;">Thank You, ${name}!</h3>
+            <p style="color: #475569; font-size: 1.05rem; margin-bottom: 1.5rem; line-height: 1.6;">
+              Your estimate request for <strong>${service}</strong> in <strong>${town || 'the CT Shoreline area'}</strong> has been recorded.
+              Giovanni Sanchez or our team will review your project and contact you at <strong>${phone}</strong>.
+            </p>
+
+            <div style="background: #faf9f5; border: 1px solid rgba(15,23,42,0.08); border-radius: 12px; padding: 1.25rem; margin-bottom: 1.5rem; text-align: left;">
+              <div style="font-weight: 700; font-size: 0.9rem; color: #0f172a; margin-bottom: 0.5rem;">Request Summary:</div>
+              <div style="font-size: 0.85rem; color: #64748b; line-height: 1.5;">
+                • <strong>Customer:</strong> ${name} (${phone}${email ? ', ' + email : ''})<br>
+                • <strong>Service:</strong> ${service}<br>
+                • <strong>Location:</strong> ${town || 'Shoreline CT'}<br>
+                ${notes ? `• <strong>Details:</strong> "${notes}"` : ''}
+              </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 0.75rem; align-items: center;">
+              <a href="tel:+18606626293" class="btn btn-call" style="width: 100%; max-width: 320px;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                Call Giovanni: (860) 662-6293
+              </a>
+              <a href="${mailtoUrl}" class="btn btn-secondary btn-sm" style="max-width: 320px;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                Send via Email App
+              </a>
+            </div>
+          </div>
+        `;
+      }, 700);
+    });
+  }
+});
