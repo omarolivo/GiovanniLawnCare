@@ -22,7 +22,7 @@
 ### 2\. Questions for Giovanni to Answer (Fill In Below)
 
 * **Q1 — Dumpster Rental Sizes & Specs:** What exact roll-off dumpster sizes do you offer? *(e.g., 10-yard, 15-yard, 20-yard, 30-yard?)*  
-  * **Giovanni's Answer:** `[FILL IN SIZES HERE]`  
+  * **Giovanni's Answer:** **12-Yard, 15-Yard, 20-Yard, and 25-Yard Roll-Off Dumpsters** (Driveway-safe hooklift placement across CT Shoreline).  
 * **Q2 — Dumpster Rental Timeframe & Weight Rules:** What is the standard rental period (e.g., 7 days, 10 days), and what items are strictly NOT allowed (e.g., tires, hazardous materials, mattresses, wet paint)?  
   * **Giovanni's Answer:** `[FILL IN RENTAL RULES HERE]`  
 * **Q3 — Home Base Town Wording:** Your office/yard address is **196 Boston Post Rd, Westbrook, CT 06498**, though an older page mentioned Clinton, CT. Should we list **Westbrook, CT** everywhere as headquarters?  
@@ -197,7 +197,10 @@
   2. **Home, Garage & Estate Cleanouts:** Make room for a move, downsizing, renovation, or general property cleanout with a convenient container right in your driveway.  
   3. **Construction & Remodeling Debris:** Manage debris from roofing, decking, siding, remodeling, and building projects with flexible delivery and pickup.  
 * **Available Dumpster Sizes:**  
-  * *\[GIOVANNI TO FILL IN EXACT SIZES HERE — e.g., 10-Yard, 15-Yard, 20-Yard\]*  
+  * **12-Yard Dumpster:** Compact size, ~4–5 pickup loads. Ideal for small attic/garage cleanouts, yard brush, small bathroom remodels.
+  * **15-Yard Dumpster:** Medium capacity, ~6–7 pickup loads. Ideal for multi-room decluttering, small deck removals, single-layer roofing tear-offs.
+  * **20-Yard Dumpster (Most Popular):** Versatile size, ~8–9 pickup loads. Ideal for whole-home cleanouts, large kitchen/bath renovations, major storm debris.
+  * **25-Yard Dumpster:** Maximum volume, ~10–12 pickup loads. Ideal for major home additions, commercial demo, multi-acre brush clearing.
 * **How Our 4-Step Dumpster Rental Works:**  
   * **Step 01 — Tell Us About Your Project:** Call us at (860) 662-6293 and share what you're clearing out, the type of debris, and when you need the container.  
   * **Step 02 — Arrange Delivery:** We coordinate a delivery window and careful placement that fits your driveway or job site.  

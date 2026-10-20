@@ -407,4 +407,37 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 700);
     });
   }
+
+  // --- 10. Dumpster Size Quick-Selection Handler ---
+  const sizeSelectBtns = document.querySelectorAll('.btn-select-size');
+  sizeSelectBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetSize = btn.getAttribute('data-size');
+      const dumpsterSelect = document.getElementById('dumpsterSize') || document.getElementById('userService');
+      const quoteTarget = document.getElementById('quoteSection') || document.getElementById('quote');
+      
+      if (dumpsterSelect && targetSize) {
+        for (let i = 0; i < dumpsterSelect.options.length; i++) {
+          if (dumpsterSelect.options[i].value.includes(targetSize) || dumpsterSelect.options[i].text.includes(targetSize)) {
+            dumpsterSelect.selectedIndex = i;
+            break;
+          }
+        }
+      }
+
+      if (quoteTarget) {
+        quoteTarget.scrollIntoView({ behavior: 'smooth' });
+        if (dumpsterSelect) {
+          dumpsterSelect.style.transition = 'box-shadow 0.3s ease, border-color 0.3s ease';
+          dumpsterSelect.style.borderColor = 'var(--accent)';
+          dumpsterSelect.style.boxShadow = '0 0 0 4px rgba(132, 204, 22, 0.35)';
+          setTimeout(() => {
+            dumpsterSelect.style.borderColor = '';
+            dumpsterSelect.style.boxShadow = '';
+          }, 1500);
+        }
+      }
+    });
+  });
 });
