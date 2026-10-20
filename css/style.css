@@ -442,7 +442,7 @@ p {
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.15rem;
 }
 
 .nav-item {
@@ -451,13 +451,14 @@ p {
 
 .nav-link {
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   color: var(--secondary);
   padding: 0.5rem 0.25rem;
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
   position: relative;
+  white-space: nowrap;
 }
 
 .nav-link::after {
@@ -2452,6 +2453,15 @@ textarea.form-control {
     margin-top: 1.5rem;
     display: inline-block;
   }
+
+  .nav-menu,
+  .header-actions .btn-primary {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
 }
 
 @media (max-width: 768px) {
@@ -2461,15 +2471,6 @@ textarea.form-control {
   
   .top-bar-inner {
     justify-content: center;
-  }
-  
-  .nav-menu,
-  .header-actions .btn-primary {
-    display: none;
-  }
-  
-  .mobile-toggle {
-    display: flex;
   }
   
   .floating-call-btn {
