@@ -75,6 +75,13 @@
 
 ### 4.1 Top Bar & Navigation Header
 
+* **Dynamic Seasonal Alert Banner (NEW Interactive Feature):**  
+  * An automated banner that reads the current calendar month and displays timely messaging, colors, and service CTA:
+    * **Spring (Mar–May):** `🌿 Spring Property Care` — *"Spring Cleanups, Lawn Dethatching & Beach Sand Opening — Booking Now"* -> Links to Spring Cleanups
+    * **Summer (Jun–Aug):** `🚜 Peak Summer Season` — *"Weekly Lawn Mowing & Surf Rake Beach Sand Sifting Active on the Shoreline"* -> Links to Beach Cleaning
+    * **Fall (Sep–Nov):** `🍂 Fall Property Care` — *"Curbside Leaf Vacuuming, Yard Cleanups & Dumpster Rentals Filling Up Fast"* -> Links to Fall Cleanups
+    * **Winter (Dec–Feb):** `❄️ 24/7 Storm Response` — *"Commercial & Residential Snow Plowing, Walkway Shoveling & Salting On Call"* -> Links to Snow Removal
+  * Includes an interactive 1-click **[Spring | Summer | Fall | Winter]** switcher to preview all seasonal modes live, plus a session dismiss `✕` button.
 * **Top Utility Bar:** Serving Connecticut's Shoreline since 2010 | Mon–Sat: 8:00 AM – 5:00 PM | **Call Us: (860) 662-6293** (Click-to-Call)  
 * **Navigation Menu:**  
   * **Services (Dropdown Menu):**  

@@ -317,6 +317,178 @@ p {
   font-size: 1.05rem;
 }
 
+/* ==========================================================================
+   DYNAMIC SEASONAL ALERT BANNER
+   ========================================================================== */
+.seasonal-banner {
+  position: relative;
+  z-index: 105;
+  color: #ffffff;
+  font-size: 0.85rem;
+  padding: 0.55rem 0;
+  transition: background 0.4s ease, border-color 0.4s ease, opacity 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.seasonal-banner.season-fall {
+  background: linear-gradient(90deg, #1c2b1f 0%, #3a2512 50%, #1c2b1f 100%);
+  border-bottom-color: rgba(245, 158, 11, 0.35);
+}
+
+.seasonal-banner.season-spring {
+  background: linear-gradient(90deg, #133827 0%, #1e4d36 50%, #133827 100%);
+  border-bottom-color: rgba(132, 204, 22, 0.4);
+}
+
+.seasonal-banner.season-summer {
+  background: linear-gradient(90deg, #0f2e3d 0%, #155e75 50%, #0f2e3d 100%);
+  border-bottom-color: rgba(56, 189, 248, 0.4);
+}
+
+.seasonal-banner.season-winter {
+  background: linear-gradient(90deg, #0b1526 0%, #1e293b 50%, #0b1526 100%);
+  border-bottom-color: rgba(147, 197, 253, 0.4);
+}
+
+.seasonal-banner.dismissed {
+  display: none !important;
+}
+
+.seasonal-banner-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.seasonal-banner-content {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.seasonal-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.seasonal-icon {
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+.seasonal-message {
+  font-weight: 500;
+  color: #f1f5f9;
+}
+
+.seasonal-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: #facc15;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-size: 0.825rem;
+  transition: all var(--transition-fast);
+}
+
+.seasonal-banner.season-spring .seasonal-cta {
+  color: #a3e635;
+}
+
+.seasonal-banner.season-summer .seasonal-cta {
+  color: #38bdf8;
+}
+
+.seasonal-banner.season-winter .seasonal-cta {
+  color: #93c5fd;
+}
+
+.seasonal-cta:hover {
+  opacity: 0.85;
+  transform: translateX(2px);
+}
+
+.seasonal-cta-arrow {
+  width: 13px;
+  height: 13px;
+}
+
+.seasonal-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.season-switcher {
+  display: inline-flex;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: var(--radius-full);
+  padding: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.season-switch-btn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.18rem 0.55rem;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.season-switch-btn:hover {
+  color: #ffffff;
+}
+
+.season-switch-btn.active {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.seasonal-banner-close {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 0 0.25rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.seasonal-banner-close:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .seasonal-controls {
+    display: none;
+  }
+  .seasonal-banner-content {
+    justify-content: center;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}
+
 /* --- Top Utility Bar --- */
 .top-bar {
   background: var(--secondary-dark);

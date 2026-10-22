@@ -440,4 +440,113 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // --- 11. Dynamic Seasonal Alert Banner Controller ---
+  const seasonalBanner = document.getElementById('seasonalBanner');
+  if (seasonalBanner) {
+    const seasonalBadge = document.getElementById('seasonalBadge');
+    const seasonalIcon = document.getElementById('seasonalIcon');
+    const seasonalLabel = document.getElementById('seasonalLabel');
+    const seasonalMessage = document.getElementById('seasonalMessage');
+    const seasonalCta = document.getElementById('seasonalCta');
+    const seasonalCtaText = document.getElementById('seasonalCtaText');
+    const seasonalClose = document.getElementById('seasonalClose');
+    const switchBtns = document.querySelectorAll('.season-switch-btn');
+
+    const seasonalData = {
+      spring: {
+        themeClass: 'season-spring',
+        icon: '🌿',
+        label: 'Spring Property Care',
+        message: 'Spring Cleanups, Lawn Dethatching & Beach Sand Opening — Booking Now',
+        ctaText: 'Schedule Spring Care',
+        ctaHref: 'spring-fall-cleanup.html'
+      },
+      summer: {
+        themeClass: 'season-summer',
+        icon: '🚜',
+        label: 'Peak Summer Season',
+        message: 'Weekly Lawn Mowing & Surf Rake Beach Sand Sifting Active on the Shoreline',
+        ctaText: 'Explore Beach Cleaning',
+        ctaHref: 'beach-cleaning.html'
+      },
+      fall: {
+        themeClass: 'season-fall',
+        icon: '🍂',
+        label: 'Fall Property Care',
+        message: 'Curbside Leaf Vacuuming, Yard Cleanups & Dumpster Rentals Filling Up Fast',
+        ctaText: 'Schedule Fall Cleanup',
+        ctaHref: 'spring-fall-cleanup.html'
+      },
+      winter: {
+        themeClass: 'season-winter',
+        icon: '❄️',
+        label: '24/7 Storm Response',
+        message: 'Commercial & Residential Snow Plowing, Walkway Shoveling & Salting On Call',
+        ctaText: 'View Snow & Ice Services',
+        ctaHref: 'snow-ice-removal.html'
+      }
+    };
+
+    function getAutoSeason() {
+      const month = new Date().getMonth(); // 0 = Jan, 9 = Oct, 11 = Dec
+      if (month >= 2 && month <= 4) return 'spring';   // Mar, Apr, May
+      if (month >= 5 && month <= 7) return 'summer';   // Jun, Jul, Aug
+      if (month >= 8 && month <= 10) return 'fall';    // Sep, Oct, Nov
+      return 'winter';                                 // Dec, Jan, Feb
+    }
+
+    function applySeason(seasonKey) {
+      const data = seasonalData[seasonKey];
+      if (!data) return;
+
+      // Update banner classes
+      seasonalBanner.classList.remove('season-spring', 'season-summer', 'season-fall', 'season-winter');
+      seasonalBanner.classList.add(data.themeClass);
+      seasonalBanner.setAttribute('data-current-season', seasonKey);
+
+      // Update content
+      if (seasonalIcon) seasonalIcon.textContent = data.icon;
+      if (seasonalLabel) seasonalLabel.textContent = data.label;
+      if (seasonalMessage) seasonalMessage.textContent = data.message;
+      if (seasonalCtaText) seasonalCtaText.textContent = data.ctaText;
+      if (seasonalCta) seasonalCta.setAttribute('href', data.ctaHref);
+
+      // Update switcher active states
+      switchBtns.forEach(btn => {
+        if (btn.getAttribute('data-switch') === seasonKey) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+    }
+
+    // Check if dismissed in this session
+    if (sessionStorage.getItem('seasonalBannerDismissed') === 'true') {
+      seasonalBanner.classList.add('dismissed');
+    } else {
+      const initialSeason = getAutoSeason();
+      applySeason(initialSeason);
+    }
+
+    // Season switcher button clicks
+    switchBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const season = btn.getAttribute('data-switch');
+        if (seasonalBanner.classList.contains('dismissed')) {
+          seasonalBanner.classList.remove('dismissed');
+          sessionStorage.removeItem('seasonalBannerDismissed');
+        }
+        applySeason(season);
+      });
+    });
+
+    // Dismiss banner handler
+    seasonalClose?.addEventListener('click', () => {
+      seasonalBanner.classList.add('dismissed');
+      sessionStorage.setItem('seasonalBannerDismissed', 'true');
+    });
+  }
 });

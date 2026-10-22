@@ -58,6 +58,39 @@
 <body>
 
   <!-- ==========================================================================
+       DYNAMIC SEASONAL ALERT BANNER
+       ========================================================================== -->
+  <aside class="seasonal-banner season-fall" id="seasonalBanner" data-current-season="fall" role="region" aria-label="Current Season Alert">
+    <div class="container seasonal-banner-container">
+      <div class="seasonal-banner-content">
+        <span class="seasonal-badge" id="seasonalBadge">
+          <span class="seasonal-icon" id="seasonalIcon">🍂</span>
+          <span class="seasonal-label" id="seasonalLabel">Fall Property Care</span>
+        </span>
+        <span class="seasonal-message" id="seasonalMessage">
+          Curbside Leaf Vacuuming, Yard Cleanups & Roll-Off Dumpster Rentals Filling Up Fast
+        </span>
+        <a href="spring-fall-cleanup.html" class="seasonal-cta" id="seasonalCta">
+          <span id="seasonalCtaText">Schedule Fall Cleanup</span>
+          <i data-lucide="arrow-right" class="seasonal-cta-arrow"></i>
+        </a>
+      </div>
+      
+      <div class="seasonal-controls">
+        <div class="season-switcher" title="Preview different seasonal modes">
+          <button type="button" class="season-switch-btn" data-switch="spring" aria-label="Preview Spring">Spring</button>
+          <button type="button" class="season-switch-btn" data-switch="summer" aria-label="Preview Summer">Summer</button>
+          <button type="button" class="season-switch-btn active" data-switch="fall" aria-label="Preview Fall">Fall</button>
+          <button type="button" class="season-switch-btn" data-switch="winter" aria-label="Preview Winter">Winter</button>
+        </div>
+        <button type="button" class="seasonal-banner-close" id="seasonalClose" aria-label="Dismiss seasonal banner">
+          &times;
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
        TOP UTILITY BAR
        ========================================================================== -->
   <aside class="top-bar" aria-label="Announcement & Quick Contact">
