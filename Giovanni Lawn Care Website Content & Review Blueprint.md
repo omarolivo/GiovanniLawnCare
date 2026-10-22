@@ -345,10 +345,7 @@
   * **Review #3 — Wyatt Burgoyne (5 Stars):**  
     > "Giovanni Lawn Care LLC does incredible work and are very detail oriented. While tending to all needs relating lawn maintenance, Giovanni and his employees go above and beyond in other areas as well. I am a very happy customer, and will continue to do business with Giovanni Lawn Care, as they are very accommodating. I very highly recommend using this company for your lawn care needs, and not to mention they do a great job plowing in the winter as well! Very professional."  
     *Tags: Weekly Lawn Maintenance, Winter Snow Plowing, Professionalism*
-  * **Review #4 — Omar Olivo (5 Stars):**  
-    > "Giovanni does an outstanding job. He was able to schedule us in during his busy schedule. He did a fantastic job at our yard. He provided us with recommendations we hadn't thought of and was very thorough at his inspections of what needed to be done for the yard to look as impeccable as it can be. Thank you Giovanni and your team for such great work."  
-    *Tags: Yard Inspection, Recommendations, Customer Focus*
-  * **Review #5 — Roberta Alexy Nieves (5 Stars):**  
+  * **Review #4 — Roberta Alexy Nieves (5 Stars):**  
     > "Giovanni Lawn Care was completely professional about resolving our property's needs. I revised my review to five stars for their responsiveness to customer communication and their professionalism in making sure the job is done right. I absolutely recommend and continue paying for services through Giovanni's Lawn Care!"  
     *Tags: Customer Responsiveness, Professional Resolution*
 
