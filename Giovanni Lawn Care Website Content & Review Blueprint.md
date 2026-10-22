@@ -348,6 +348,9 @@
   * **Review #4 — Roberta Alexy Nieves (5 Stars):**  
     > "Giovanni Lawn Care was completely professional about resolving our property's needs. I revised my review to five stars for their responsiveness to customer communication and their professionalism in making sure the job is done right. I absolutely recommend and continue paying for services through Giovanni's Lawn Care!"  
     *Tags: Customer Responsiveness, Professional Resolution*
+  * **Review #5 — Chase Walker (5 Stars • Google Review):**  
+    > "Over our years with Giovanni, I have found that they do a very good job. Generally shows up when expected. Overall happy with the service that has been provided."  
+    *Tags: Lawn Mowing & Maintenance, Reasonable Pricing, Long-Term Reliability*
 
 ---
 
