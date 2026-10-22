@@ -203,7 +203,8 @@
   1. **Yard Waste & Storm Debris:** Collect branches, brush, leaves, shrubs, and heavy landscaping debris from seasonal cleanups or yard overhauls.  
   2. **Home, Garage & Estate Cleanouts:** Make room for a move, downsizing, renovation, or general property cleanout with a convenient container right in your driveway.  
   3. **Construction & Remodeling Debris:** Manage debris from roofing, decking, siding, remodeling, and building projects with flexible delivery and pickup.  
-* **Available Dumpster Sizes:**  
+* **Available Dumpster Sizes & Interactive Project Estimator Tool (NEW):**  
+  * **Interactive Estimator:** Homeowners click their project (*Garage Cleanout, Bathroom Remodel, Kitchen/Multi-Room, Yard Brush, Roofing/Decking, Whole-Home/Demo*) and receive an instant size recommendation, capacity fill bar, truck load equivalents, and 1-click quote pre-fill.
   * **12-Yard Dumpster:** Compact size, ~4–5 pickup loads. Ideal for small attic/garage cleanouts, yard brush, small bathroom remodels.
   * **15-Yard Dumpster:** Medium capacity, ~6–7 pickup loads. Ideal for multi-room decluttering, small deck removals, single-layer roofing tear-offs.
   * **20-Yard Dumpster (Most Popular):** Versatile size, ~8–9 pickup loads. Ideal for whole-home cleanouts, large kitchen/bath renovations, major storm debris.

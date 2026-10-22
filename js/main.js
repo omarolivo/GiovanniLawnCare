@@ -549,4 +549,177 @@ document.addEventListener('DOMContentLoaded', () => {
       sessionStorage.setItem('seasonalBannerDismissed', 'true');
     });
   }
+
+  // --- 12. Interactive Dumpster Size & Project Estimator Controller ---
+  const dumpsterEstimator = document.getElementById('dumpsterEstimator');
+  if (dumpsterEstimator) {
+    const projectBtns = dumpsterEstimator.querySelectorAll('.project-btn');
+    const estSizeTag = document.getElementById('estSizeTag');
+    const estBadge = document.getElementById('estBadge');
+    const estDimensions = document.getElementById('estDimensions');
+    const estHeadline = document.getElementById('estHeadline');
+    const estDescription = document.getElementById('estDescription');
+    const estLoads = document.getElementById('estLoads');
+    const estYards = document.getElementById('estYards');
+    const estProgressBar = document.getElementById('estProgressBar');
+    const btnBookEstimated = document.getElementById('btnBookEstimated');
+
+    const projectEstimates = {
+      garage: {
+        size: '12-Yard Dumpster Rental',
+        tag: '12-Yard Roll-Off',
+        badge: 'Compact & Driveway Friendly',
+        dimensions: "Approx. 14' L × 7.5' W × 3.5' H",
+        headline: 'Ideal for Garage, Attic & Basement Decluttering',
+        description: 'Perfect for small cleanouts, yard brush, broken furniture, boxes, and spring decluttering. Fits tightly into Shoreline beach cottages and small driveways without blocking access.',
+        loads: '~4–5 Pickup Truck Loads',
+        yards: '12 Cubic Yards',
+        progress: '45%'
+      },
+      bathroom: {
+        size: '15-Yard Dumpster Rental',
+        tag: '15-Yard Roll-Off',
+        badge: 'Single Remodel Favorite',
+        dimensions: "Approx. 14' L × 7.5' W × 4.5' H",
+        headline: 'Right-Sized for Bathroom Remodels & Small Decks',
+        description: 'Provides comfortable room for old vanities, tubs, tile rubble, drywall, and small lumber tear-offs with extra space for general project cleanup.',
+        loads: '~6–7 Pickup Truck Loads',
+        yards: '15 Cubic Yards',
+        progress: '60%'
+      },
+      kitchen: {
+        size: '20-Yard Dumpster Rental',
+        tag: '20-Yard Roll-Off',
+        badge: '★ Most Popular Choice',
+        dimensions: "Approx. 16' L × 8' W × 5' H",
+        headline: 'Optimal for Kitchens, Multi-Room Renos & Drywall',
+        description: 'Our 20-yard dumpster is the Connecticut Shoreline’s #1 choice. It comfortably holds bulky cabinets, countertops, flooring, and appliances with ground-level walk-in rear doors.',
+        loads: '~8–9 Pickup Truck Loads',
+        yards: '20 Cubic Yards',
+        progress: '80%'
+      },
+      yard: {
+        size: '15-Yard Dumpster Rental',
+        tag: '15-Yard Roll-Off',
+        badge: 'Storm Debris & Landscaping',
+        dimensions: "Approx. 14' L × 7.5' W × 4.5' H",
+        headline: 'Great for Heavy Branches, Shrub Clearing & Storm Debris',
+        description: 'Pack down heavy limbs, hedge trimmings, stumps, and storm-damaged brush. Low sidewalls make tossing awkward limbs and yard waste easy.',
+        loads: '~6–7 Pickup Truck Loads',
+        yards: '15 Cubic Yards',
+        progress: '60%'
+      },
+      roofing: {
+        size: '15-Yard Dumpster Rental',
+        tag: '15-Yard Roll-Off',
+        badge: 'Heavy Material Rated',
+        dimensions: "Approx. 14' L × 7.5' W × 4.5' H",
+        headline: 'Engineered for Heavy Shingles, Underlayment & Decking',
+        description: 'Heavy materials like asphalt shingles require precise weight distribution. Our 15-yard is the contractor-preferred size for single-layer shingle tear-offs up to 30 squares.',
+        loads: '~6–7 Pickup Truck Loads',
+        yards: '15 Cubic Yards',
+        progress: '65%'
+      },
+      wholehome: {
+        size: '25-Yard Dumpster Rental',
+        tag: '25-Yard Roll-Off',
+        badge: 'Maximum Capacity Container',
+        dimensions: "Approx. 18' L × 8' W × 5.5' H",
+        headline: 'Maximum Volume for Whole-Home Cleanouts & Additions',
+        description: 'When tackling an entire estate cleanout, major move, or multi-room demolition, the 25-yard provides massive cubic volume so you avoid paying twice for a second haul.',
+        loads: '~10–12 Pickup Truck Loads',
+        yards: '25 Cubic Yards',
+        progress: '100%'
+      }
+    };
+
+    function updateEstimator(key) {
+      const data = projectEstimates[key];
+      if (!data) return;
+
+      projectBtns.forEach(btn => {
+        if (btn.getAttribute('data-project') === key) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      if (estSizeTag) estSizeTag.textContent = data.tag;
+      if (estBadge) estBadge.textContent = data.badge;
+      if (estDimensions) {
+        estDimensions.innerHTML = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary);"><path d="m15 15 6 6m-6-6v4.8m0-4.8h4.8M9 9 3 3m6 6V4.2M9 9H4.2"></path><path d="M21 3 3 21"></path></svg> ${data.dimensions}`;
+      }
+      if (estHeadline) estHeadline.textContent = data.headline;
+      if (estDescription) estDescription.textContent = data.description;
+      if (estLoads) estLoads.textContent = data.loads;
+      if (estYards) estYards.textContent = data.yards;
+      if (estProgressBar) estProgressBar.style.width = data.progress;
+      if (btnBookEstimated) {
+        btnBookEstimated.setAttribute('data-size', data.size);
+        btnBookEstimated.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> Reserve ${data.tag.split(' ')[0]} Dumpster`;
+      }
+
+      // Also highlight matching size card in sizes-grid if present on page
+      const sizeCards = document.querySelectorAll('.size-card');
+      const sizeNumber = data.tag.split('-')[0];
+      sizeCards.forEach(card => {
+        const capacityTag = card.querySelector('.size-capacity-tag');
+        if (capacityTag && capacityTag.textContent.includes(sizeNumber)) {
+          card.style.borderColor = 'var(--accent)';
+          card.style.transform = 'translateY(-4px)';
+          card.style.boxShadow = '0 0 0 3px rgba(132, 204, 22, 0.35), var(--shadow-lg)';
+        } else {
+          card.style.borderColor = '';
+          card.style.transform = '';
+          card.style.boxShadow = '';
+        }
+      });
+    }
+
+    projectBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const projectKey = btn.getAttribute('data-project');
+        updateEstimator(projectKey);
+      });
+    });
+
+    btnBookEstimated?.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetSize = btnBookEstimated.getAttribute('data-size');
+      const activeBtn = dumpsterEstimator.querySelector('.project-btn.active');
+      const projectTitle = activeBtn ? activeBtn.querySelector('strong').textContent : 'Project';
+
+      const dumpsterSelect = document.getElementById('dumpsterSize') || document.getElementById('userService');
+      const notesField = document.getElementById('userNotes');
+      const quoteTarget = document.getElementById('quoteSection') || document.getElementById('contact');
+
+      if (dumpsterSelect && targetSize) {
+        for (let i = 0; i < dumpsterSelect.options.length; i++) {
+          if (dumpsterSelect.options[i].value.includes(targetSize) || dumpsterSelect.options[i].text.includes(targetSize)) {
+            dumpsterSelect.selectedIndex = i;
+            break;
+          }
+        }
+      }
+
+      if (notesField && (!notesField.value || notesField.value.startsWith('Project Type:'))) {
+        notesField.value = `Project Type: ${projectTitle} (${targetSize})`;
+      }
+
+      if (quoteTarget) {
+        quoteTarget.scrollIntoView({ behavior: 'smooth' });
+        if (dumpsterSelect) {
+          dumpsterSelect.style.transition = 'box-shadow 0.3s ease, border-color 0.3s ease';
+          dumpsterSelect.style.borderColor = 'var(--accent)';
+          dumpsterSelect.style.boxShadow = '0 0 0 4px rgba(132, 204, 22, 0.4)';
+          setTimeout(() => {
+            dumpsterSelect.style.borderColor = '';
+            dumpsterSelect.style.boxShadow = '';
+          }, 2000);
+        }
+      }
+    });
+  }
 });
