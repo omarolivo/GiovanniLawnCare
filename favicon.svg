@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Clean rounded badge for contrast on both dark and light browser tabs -->
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#ffffff" stroke="#173b2c" stroke-width="2.5" filter="url(#softShadow)"/>
+
+  <!-- Bold Red 'G' -->
+  <path d="M 44.5 21.5 C 41.5 16 36.5 13 31 13 C 20.5 13 13 21 13 32 C 13 43 20.5 51 31 51 C 40 51 46.5 44.5 47.8 36.5 L 31 36.5 L 31 29.5 L 54.5 29.5 C 54.8 31 55 32.8 55 34.5 C 55 47.5 44.5 58 31 58 C 16.5 58 6 46.5 6 32 C 6 17.5 16.5 6 31 6 C 39.5 6 47.5 10.5 51.5 17.5 L 44.5 21.5 Z" fill="url(#redGrad)"/>
+
+  <!-- Subtle Emerald Leaf Accent representing Lawn Care -->
+  <path d="M 45 13 C 51 11 55 15 54 21 C 48 23 44 19 45 13 Z" fill="#16a34a"/>
+  <path d="M 45 13 Q 48 18 54 21" stroke="#ffffff" stroke-width="0.75" fill="none" stroke-linecap="round"/>
+</svg>
