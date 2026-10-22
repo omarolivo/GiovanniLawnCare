@@ -332,15 +332,25 @@
 
 ## PART 7: CUSTOMER REVIEWS SECTION (`#reviews`)
 
-*(Note: Once Giovanni collects the new Google Reviews this week, we will paste the top 5-star reviews right here and link directly to the Google Business Profile.)*
-
+* **Verified Google Place Profile:** [Giovanni Lawn Care on Google Maps](https://maps.app.goo.gl/Fzua5mqUQS7tMDCR9) (5.0 ★ Rating)
 * **Section Headline:** Trusted by Your Shoreline Neighbors  
-* **Subheadline:** Proudly serving over 170+ recurring residential and commercial customers across Westbrook, Clinton, Madison, Old Saybrook, and surrounding towns.  
-* **Placeholders for Incoming Google Reviews:**  
-  * *\[Review \#1 — Lawn Maintenance / Reliability\]*  
-  * *\[Review \#2 — Stonework / Patio Craftsmanship\]*  
-  * *\[Review \#3 — Dumpster Rental / Fast Delivery\]*  
-  * *\[Review \#4 — Seasonal Cleanup / Beach Cleaning\]*
+* **Subheadline:** Proudly serving over 170+ recurring residential and commercial customers across Westbrook, Clinton, Madison, Old Saybrook, and surrounding coastal towns.  
+* **Verified Google Reviews Imported from Business Profile:**  
+  * **Review #1 — Dave B. (Local Guide • 5 Stars):**  
+    > "After 2 seasons of lawn care and fall cleanup I have to say Giovanni’s crews are meticulous and reliable. Great communications and a fair price. Thanks for everything!"  
+    *Tags: Lawn Care, Fall Cleanup, Fair Pricing*
+  * **Review #2 — Martha Lindberg-Salvati (5 Stars):**  
+    > "I have nothing but high praise for Giovanni’s Lawn Care. What his crew accomplished in one day was nothing short of amazing. When they arrived (on schedule) the side of our house was a jungle of overgrown vegetation that became impossible for me to tackle. The front of the house gardens and stonewalls were covered in ivy that had choked out all the perennial flowers. At the end of the day all the above mentioned had miraculously vanished leaving me with a blank slate to plant flowers once again in an area that I hadn’t seen soil or stonewalls in years. Thank you Giovanni for turning my jungle into a garden!"  
+    *Tags: Garden Beds, Stonewall Restoration, Property Overhaul*
+  * **Review #3 — Wyatt Burgoyne (5 Stars):**  
+    > "Giovanni Lawn Care LLC does incredible work and are very detail oriented. While tending to all needs relating lawn maintenance, Giovanni and his employees go above and beyond in other areas as well. I am a very happy customer, and will continue to do business with Giovanni Lawn Care, as they are very accommodating. I very highly recommend using this company for your lawn care needs, and not to mention they do a great job plowing in the winter as well! Very professional."  
+    *Tags: Weekly Lawn Maintenance, Winter Snow Plowing, Professionalism*
+  * **Review #4 — Omar Olivo (5 Stars):**  
+    > "Giovanni does an outstanding job. He was able to schedule us in during his busy schedule. He did a fantastic job at our yard. He provided us with recommendations we hadn't thought of and was very thorough at his inspections of what needed to be done for the yard to look as impeccable as it can be. Thank you Giovanni and your team for such great work."  
+    *Tags: Yard Inspection, Recommendations, Customer Focus*
+  * **Review #5 — Roberta Alexy Nieves (5 Stars):**  
+    > "Giovanni Lawn Care was completely professional about resolving our property's needs. I revised my review to five stars for their responsiveness to customer communication and their professionalism in making sure the job is done right. I absolutely recommend and continue paying for services through Giovanni's Lawn Care!"  
+    *Tags: Customer Responsiveness, Professional Resolution*
 
 ---
 

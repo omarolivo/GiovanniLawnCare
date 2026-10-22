@@ -2010,6 +2010,43 @@ p {
   color: var(--text-muted);
 }
 
+.google-rating-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  padding: 0.5rem 1.25rem;
+  box-shadow: var(--shadow-sm);
+  margin-top: 1.25rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--secondary);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.google-rating-banner:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary);
+}
+
+.google-badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #15803d;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full);
+}
+
+
 /* ==========================================================================
    SERVICE AREA (10 CT TOWNS)
    ========================================================================== */
@@ -2412,7 +2449,8 @@ textarea.form-control {
    RESPONSIVE MEDIA QUERIES
    ========================================================================== */
 @media (max-width: 1024px) {
-  .services-grid {
+  .services-grid,
+  .reviews-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   
