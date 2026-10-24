@@ -1,0 +1,1727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giovanni Lawn Care LLC | Connecticut Shoreline Landscaping, Dumpsters & Beach Cleaning</title>
+  <meta name="description" content="Giovanni Lawn Care LLC provides 4-season property care across the CT Shoreline: lawn maintenance, paver patios & stonework, roll-off dumpster rentals, mechanical beach cleaning, cleanups, and winter snow removal. Call (860) 662-6293.">
+  <meta name="keywords" content="Giovanni Lawn Care, Westbrook CT landscaper, Clinton CT landscaping, Madison CT lawn care, shoreline beach cleaning Barber Surf Rake, dumpster rentals Westbrook CT, paver patios, snow removal">
+  <link rel="canonical" href="https://giovannilawncare.com/">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons (CDN) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Schema.org JSON-LD Structured Data for Local Business SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Giovanni Lawn Care LLC",
+    "image": "https://giovannilawncare.com/Images/LOGO-327x112-1-1.png",
+    "telephone": "+1-860-662-6293",
+    "email": "giovannilawncare@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "196 Boston Post Rd",
+      "addressLocality": "Westbrook",
+      "addressRegion": "CT",
+      "postalCode": "06498",
+      "addressCountry": "US"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "08:00",
+        "closes": "17:00"
+      }
+    ],
+    "areaServed": [
+      "Westbrook, CT", "Clinton, CT", "Madison, CT", "Guilford, CT",
+      "Old Saybrook, CT", "Killingworth, CT", "Deep River, CT", "Essex, CT",
+      "Ivoryton, CT", "Chester, CT"
+    ],
+    "founder": "Giovanni Sanchez",
+    "foundingDate": "2010",
+    "priceRange": "$$"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       DYNAMIC SEASONAL ALERT BANNER
+       ========================================================================== -->
+  <aside class="seasonal-banner season-fall" id="seasonalBanner" data-current-season="fall" role="region" aria-label="Current Season Alert">
+    <div class="container seasonal-banner-container">
+      <div class="seasonal-banner-content">
+        <span class="seasonal-badge" id="seasonalBadge">
+          <span class="seasonal-icon" id="seasonalIcon">🍂</span>
+          <span class="seasonal-label" id="seasonalLabel">Fall Property Care</span>
+        </span>
+        <span class="seasonal-message" id="seasonalMessage">
+          Curbside Leaf Vacuuming, Yard Cleanups & Roll-Off Dumpster Rentals Filling Up Fast
+        </span>
+        <a href="spring-fall-cleanup.html" class="seasonal-cta" id="seasonalCta">
+          <span id="seasonalCtaText">Schedule Fall Cleanup</span>
+          <i data-lucide="arrow-right" class="seasonal-cta-arrow"></i>
+        </a>
+      </div>
+      
+      <div class="seasonal-controls">
+        <div class="season-switcher" title="Preview different seasonal modes">
+          <button type="button" class="season-switch-btn" data-switch="spring" aria-label="Preview Spring">Spring</button>
+          <button type="button" class="season-switch-btn" data-switch="summer" aria-label="Preview Summer">Summer</button>
+          <button type="button" class="season-switch-btn active" data-switch="fall" aria-label="Preview Fall">Fall</button>
+          <button type="button" class="season-switch-btn" data-switch="winter" aria-label="Preview Winter">Winter</button>
+        </div>
+        <button type="button" class="seasonal-banner-close" id="seasonalClose" aria-label="Dismiss seasonal banner">
+          &times;
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       TOP UTILITY BAR
+       ========================================================================== -->
+  <aside class="top-bar" aria-label="Announcement & Quick Contact">
+    <div class="container">
+      <div class="top-bar-inner">
+        <div class="top-bar-left">
+          <span class="top-bar-item">
+            <i data-lucide="map-pin"></i> Serving 10 Connecticut Shoreline Towns Since 2010
+          </span>
+          <span class="top-bar-item">
+            <i data-lucide="clock"></i> Mon–Sat: 8:00 AM – 5:00 PM (24/7 Storm Response)
+          </span>
+        </div>
+        <div class="top-bar-right">
+          <div class="review-badge-mini">
+            <span class="stars">★★★★★</span>
+            <span>5.0 Star Rated Local Business</span>
+          </div>
+          <a href="tel:+18606626293" class="top-bar-phone" id="topBarPhone">
+            <i data-lucide="phone-call"></i> Call or Text: (860) 662-6293
+          </a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       STICKY MAIN NAVIGATION HEADER
+       ========================================================================== -->
+  <header class="main-header" id="mainHeader">
+    <div class="container">
+      <nav class="nav-container" aria-label="Main Navigation">
+        <!-- Logo -->
+        <a href="index.html" class="logo-wrapper" aria-label="Giovanni Lawn Care LLC Home">
+          <img src="Images/LOGO-327x112-1-1.png" alt="Giovanni Lawn Care LLC Logo" class="logo-img" width="160" height="55">
+        </a>
+
+        <!-- Desktop Menu -->
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link active">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#services" class="nav-link">
+              Services <i data-lucide="chevron-down"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a href="dumpster-rentals.html" class="dropdown-link">
+                <span>Roll-Off Dumpster Rentals</span>
+                <span class="badge-featured">Popular</span>
+              </a>
+              <a href="beach-cleaning.html" class="dropdown-link">
+                <span>Shoreline Beach Cleaning</span>
+                <span class="badge-new">New</span>
+              </a>
+              <a href="stonework.html" class="dropdown-link">
+                <span>Stonework & Paver Patios</span>
+              </a>
+              <a href="lawn-garden-care.html" class="dropdown-link">
+                <span>Lawn & Garden Care</span>
+              </a>
+              <a href="lawn-maintenance.html" class="dropdown-link">
+                <span>Lawn Maintenance</span>
+              </a>
+              <a href="spring-fall-cleanup.html" class="dropdown-link">
+                <span>Spring & Fall Cleanup</span>
+              </a>
+              <a href="snow-ice-removal.html" class="dropdown-link">
+                <span>Snow & Ice Removal</span>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="why-choose-us.html" class="nav-link">Why Choose Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="#work" class="nav-link">Our Work</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">
+              About <i data-lucide="chevron-down"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a href="#about" class="dropdown-link">
+                <span>Giovanni's Story</span>
+                <span class="badge-new">Est. 2010</span>
+              </a>
+              <a href="#reviews" class="dropdown-link">
+                <span>Customer Reviews</span>
+                <span class="badge-featured">5.0 ★</span>
+              </a>
+              <a href="#faq" class="dropdown-link">
+                <span>Frequently Asked Questions</span>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+        </ul>
+
+        <!-- Header Actions -->
+        <div class="header-actions">
+          <a href="tel:+18606626293" class="btn btn-call btn-sm" id="headerCallBtn" aria-label="Call Giovanni Lawn Care">
+            <i data-lucide="phone"></i> Call (860) 662-6293
+          </a>
+          <a href="#contact" class="btn btn-primary btn-sm" id="headerQuoteBtn">
+            Free Estimate
+          </a>
+          <button class="mobile-toggle" aria-label="Open mobile navigation menu" id="mobileMenuToggle">
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MOBILE NAVIGATION DRAWER
+       ========================================================================== -->
+  <div class="mobile-nav-backdrop" id="mobileBackdrop"></div>
+  <aside class="mobile-nav" id="mobileNavDrawer" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <img src="Images/LOGO-327x112-1-1.png" alt="Giovanni Lawn Care LLC Logo" style="height: 38px; width: auto;">
+      <button class="mobile-nav-close" id="mobileMenuClose" aria-label="Close menu">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+
+    <nav class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link active">Home</a>
+      <span class="mobile-nav-link" style="color: var(--primary); font-weight: 700;">Services</span>
+      <div class="mobile-services-list">
+        <a href="dumpster-rentals.html">🚛 Roll-Off Dumpster Rentals (Featured)</a>
+        <a href="beach-cleaning.html">🏖️ Shoreline Beach Cleaning (New)</a>
+        <a href="stonework.html">🧱 Stonework & Paver Patios</a>
+        <a href="lawn-garden-care.html">🌱 Lawn & Garden Care</a>
+        <a href="lawn-maintenance.html">✂️ Weekly Lawn Maintenance</a>
+        <a href="spring-fall-cleanup.html">🍂 Spring & Fall Cleanup</a>
+        <a href="snow-ice-removal.html">❄️ Snow & Ice Removal</a>
+      </div>
+      <a href="why-choose-us.html" class="mobile-nav-link" style="color: var(--primary); font-weight: 700;">⭐ Why Choose Us (Comparison)</a>
+      <a href="#about" class="mobile-nav-link">About Giovanni</a>
+      <a href="#work" class="mobile-nav-link">Before & After Work</a>
+      <a href="#reviews" class="mobile-nav-link">Customer Reviews</a>
+      <a href="#faq" class="mobile-nav-link">FAQs</a>
+      <a href="#contact" class="mobile-nav-link">Contact & Quote</a>
+    </nav>
+
+    <div class="mobile-nav-contact">
+      <a href="tel:+18606626293" class="btn btn-call" style="width: 100%;">
+        <i data-lucide="phone"></i> Call or Text (860) 662-6293
+      </a>
+      <a href="#contact" class="btn btn-primary" style="width: 100%;">
+        <i data-lucide="calendar"></i> Request Free Estimate
+      </a>
+      <div style="font-size: 0.85rem; color: var(--text-muted); text-align: center; margin-top: 0.5rem;">
+        196 Boston Post Rd, Westbrook, CT 06498
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       HERO SECTION WITH SEASONAL SLIDESHOW
+       ========================================================================== -->
+  <section class="hero-section" id="hero">
+    <div class="hero-slider-wrap">
+
+      <!-- Slide 1: Current Season — Spring & Fall Cleanup -->
+      <article class="hero-slide active" data-season="cleanup">
+        <img src="Images/IMG_1567-Medium-1024x738-1.jpg" alt="Giovanni Ram dump truck with commercial leaf vacuum setup" class="hero-bg-img">
+        <div class="hero-overlay"></div>
+        <div class="container">
+          <div class="hero-content">
+            <span class="hero-tag" style="background: rgba(234, 88, 12, 0.2); color: #fdba74; border-color: rgba(234, 88, 12, 0.4);">
+              <i data-lucide="wind"></i> Seasonal Cleanups
+            </span>
+            <h2 class="hero-title">A fresh start every season.</h2>
+            <p class="hero-desc">
+              We clear leaves, fallen branches, and seasonal debris with commercial truck loaders so your lawn and landscaping stay healthy year-round.
+            </p>
+            <div class="hero-actions">
+              <a href="spring-fall-cleanup.html" class="btn btn-primary btn-lg">
+                Explore Cleanups <i data-lucide="arrow-right"></i>
+              </a>
+              <a href="tel:+18606626293" class="btn btn-outline-white btn-lg">
+                <i data-lucide="phone"></i> Schedule Cleanup
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Slide 2: Main Overview -->
+      <article class="hero-slide" data-season="overview">
+        <img src="Images/IMG_4633%20(Custom).JPG" alt="Giovanni Sanchez mowing lush green lawn with commercial zero turn mower" class="hero-bg-img">
+        <div class="hero-overlay"></div>
+        <div class="container">
+          <div class="hero-content">
+            <span class="hero-tag">
+              <i data-lucide="shield-check"></i> Serving the Shoreline Since 2010
+            </span>
+            <h1 class="hero-title">A better yard starts right here.</h1>
+            <p class="hero-desc">
+              From a beautifully kept lawn to a brand-new outdoor patio, Barber Surf Rake beach grooming, or roll-off dumpster rental, Giovanni Lawn Care brings dependable service and thoughtful craftsmanship to homes and businesses across Connecticut’s Shoreline.
+            </p>
+            <div class="hero-actions">
+              <a href="tel:+18606626293" class="btn btn-call btn-lg">
+                <i data-lucide="phone-call"></i> Call (860) 662-6293
+              </a>
+              <a href="#contact" class="btn btn-outline-white btn-lg">
+                Request Free Quote <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Slide 3: Dumpster Rentals (High Priority SEO) -->
+      <article class="hero-slide" data-season="dumpsters">
+        <img src="Images/Dumpster_Rentals_Truck_Trailer_01.jpg" alt="Giovanni Lawn Care hooklift dumpster truck on Connecticut shoreline road" class="hero-bg-img">
+        <div class="hero-overlay"></div>
+        <div class="container">
+          <div class="hero-content">
+            <span class="hero-tag" style="background: rgba(220, 38, 38, 0.2); color: #fca5a5; border-color: rgba(220, 38, 38, 0.4);">
+              <i data-lucide="truck"></i> Featured Shoreline Service
+            </span>
+            <h2 class="hero-title">Roll-off dumpsters, delivered on your schedule.</h2>
+            <p class="hero-desc">
+              Convenient, driveway-safe dumpster rentals in 12, 15, 20 & 25 yard sizes for yard debris, home cleanouts, and construction or remodeling projects across Westbrook, Clinton, Madison, and surrounding towns.
+            </p>
+            <div class="hero-actions">
+              <a href="dumpster-rentals.html" class="btn btn-accent btn-lg">
+                Explore Dumpster Rentals <i data-lucide="arrow-right"></i>
+              </a>
+              <a href="tel:+18606626293" class="btn btn-outline-white btn-lg">
+                <i data-lucide="phone"></i> Call for Dumpster Delivery
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Slide 4: Shoreline Beach Cleaning (High Priority SEO) -->
+      <article class="hero-slide" data-season="beach">
+        <img src="Images/Beach_Cleaning_Barber_Surf_Rake_Tractor.jpeg" alt="Barber Surf Rake Beach Cleaning Tractor on Connecticut shoreline" class="hero-bg-img">
+        <div class="hero-overlay"></div>
+        <div class="container">
+          <div class="hero-content">
+            <span class="hero-tag" style="background: rgba(14, 165, 233, 0.2); color: #7dd3fc; border-color: rgba(14, 165, 233, 0.4);">
+              <i data-lucide="waves"></i> Coastal Beach Grooming
+            </span>
+            <h2 class="hero-title">Cleaner sand, better shoreline.</h2>
+            <p class="hero-desc">
+              Professional mechanical sand sifting and grooming with our Barber Surf Rake for private beachfronts and Connecticut beach associations. Bare-foot safe, odor-free, and storm-ready.
+            </p>
+            <div class="hero-actions">
+              <a href="beach-cleaning.html" class="btn btn-accent btn-lg">
+                Explore Beach Cleaning <i data-lucide="arrow-right"></i>
+              </a>
+              <a href="#contact" class="btn btn-outline-white btn-lg">
+                Book Shoreline Assessment <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Slide 5: Stonework & Hardscaping -->
+      <article class="hero-slide" data-season="stonework">
+        <img src="Images/Stonework_Pool_Paver_Patio_Overview.jpg" alt="Completed paver patio around in-ground pool built by Giovanni Lawn Care" class="hero-bg-img">
+        <div class="hero-overlay"></div>
+        <div class="container">
+          <div class="hero-content">
+            <span class="hero-tag">
+              <i data-lucide="hammer"></i> Masonry & Hardscaping
+            </span>
+            <h2 class="hero-title">Outdoor living, built to last.</h2>
+            <p class="hero-desc">
+              Custom paver patios, pool surrounds, walkways, granite steps, and structural retaining walls designed around the way you live outside.
+            </p>
+            <div class="hero-actions">
+              <a href="stonework.html" class="btn btn-primary btn-lg">
+                Explore Stonework <i data-lucide="arrow-right"></i>
+              </a>
+              <a href="#contact" class="btn btn-outline-white btn-lg">
+                Get Patio Estimate <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Slide 6: Lawn & Garden Care -->
+      <article class="hero-slide" data-season="lawn">
+        <img src="Images/Lawn_Garden_Care_Planting_Mulching.jpeg" alt="Giovanni crew installing flower garden beds and fresh mulch" class="hero-bg-img">
+        <div class="hero-overlay"></div>
+        <div class="container">
+          <div class="hero-content">
+            <span class="hero-tag">
+              <i data-lucide="sprout"></i> Complete Garden Care
+            </span>
+            <h2 class="hero-title">Gardens that grow with pride.</h2>
+            <p class="hero-desc">
+              Planting, mulching, sod installation, hydroseeding, and custom garden beds tailored to Connecticut Shoreline coastal soils.
+            </p>
+            <div class="hero-actions">
+              <a href="lawn-garden-care.html" class="btn btn-accent btn-lg">
+                Explore Lawn & Garden <i data-lucide="arrow-right"></i>
+              </a>
+              <a href="#contact" class="btn btn-outline-white btn-lg">
+                Request Garden Design <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Slide 7: Snow & Ice Removal -->
+      <article class="hero-slide" data-season="winter">
+        <img src="Images/IMG_1853-Custom.jpg" alt="Fleet of Giovanni snow plow trucks lined up ready for winter storm response" class="hero-bg-img">
+        <div class="hero-overlay"></div>
+        <div class="container">
+          <div class="hero-content">
+            <span class="hero-tag" style="background: rgba(59, 130, 246, 0.2); color: #93c5fd; border-color: rgba(59, 130, 246, 0.4);">
+              <i data-lucide="snowflake"></i> 24/7 Winter Response
+            </span>
+            <h2 class="hero-title">Ready when winter hits.</h2>
+            <p class="hero-desc">
+              Dependable commercial and residential snow plowing, walkway clearing, salting, and ice control tailored to your property layout.
+            </p>
+            <div class="hero-actions">
+              <a href="snow-ice-removal.html" class="btn btn-primary btn-lg">
+                Explore Snow Removal <i data-lucide="arrow-right"></i>
+              </a>
+              <a href="tel:+18606626293" class="btn btn-outline-white btn-lg">
+                <i data-lucide="phone"></i> Winter Dispatch Call
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Seasonal Quick Switcher & Controls Bar -->
+    <nav class="season-bar" aria-label="Seasonal Quick Jump">
+      <div class="container">
+        <div class="season-bar-inner">
+          <div class="season-label-title">
+            <i data-lucide="compass"></i> Quick View:
+          </div>
+          <div class="season-pills">
+            <button class="season-pill active" data-season="cleanup">🍂 Cleanups</button>
+            <button class="season-pill" data-season="overview">Overview</button>
+            <button class="season-pill" data-season="dumpsters">🚛 Dumpsters</button>
+            <button class="season-pill" data-season="beach">🏖️ Beach Cleaning</button>
+            <button class="season-pill" data-season="stonework">🧱 Stonework</button>
+            <button class="season-pill" data-season="lawn">🌱 Lawn & Garden</button>
+            <button class="season-pill" data-season="winter">❄️ Snow & Ice</button>
+          </div>
+          <div class="slider-nav">
+            <button class="slider-btn slider-prev" aria-label="Previous slide">
+              <i data-lucide="chevron-left"></i>
+            </button>
+            <button class="slider-btn slider-next" aria-label="Next slide">
+              <i data-lucide="chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- ==========================================================================
+       QUICK COMPANY STATS BAR
+       ========================================================================== -->
+  <section class="stats-bar" aria-label="Company Statistics">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-icon"><i data-lucide="award"></i></div>
+          <div class="stat-info">
+            <div class="stat-number" data-target="16" data-suffix="+">16+</div>
+            <div class="stat-title">Years in Business</div>
+            <div class="stat-desc">Established 2010; 20+ years hands-on landscaping experience</div>
+          </div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon"><i data-lucide="layers"></i></div>
+          <div class="stat-info">
+            <div class="stat-number" data-target="7" data-suffix=" Core">7 Core</div>
+            <div class="stat-title">Outdoor Services</div>
+            <div class="stat-desc">Complete four-season property care for residential & commercial</div>
+          </div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon"><i data-lucide="map-pin"></i></div>
+          <div class="stat-info">
+            <div class="stat-number" data-target="10" data-suffix=" Towns">10 Towns</div>
+            <div class="stat-title">Shoreline Towns</div>
+            <div class="stat-desc">Westbrook, Clinton, Madison, Guilford, Old Saybrook & valley</div>
+          </div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon"><i data-lucide="calendar-check"></i></div>
+          <div class="stat-info">
+            <div class="stat-number" data-target="6" data-suffix=" Days">6 Days</div>
+            <div class="stat-title">Weekly Operations</div>
+            <div class="stat-desc">Mon–Sat 8am–5pm + 24/7 winter storm dispatch</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SERVICES GRID: "One Team. Every Season."
+       ========================================================================== -->
+  <section class="section bg-sand" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">One Team. Every Season.</span>
+        <h2 class="section-title">Reliable Outdoor Services for Your Shoreline Property</h2>
+        <p class="section-desc">
+          From first spring cleanup to the last winter snowfall—and everything in between—Giovanni Lawn Care provides complete, dependable property craftsmanship.
+        </p>
+      </div>
+
+      <div class="services-grid">
+
+        <!-- 01: Lawn & Garden Care -->
+        <article class="service-card">
+          <div class="service-card-img-wrap">
+            <span class="service-num">01</span>
+            <img src="Images/Lawn_Garden_Care_Sod_Installation.jpg" alt="Giovanni crew installing sod lawn next to patio" class="service-card-img" loading="lazy">
+          </div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">Lawn & Garden Care</h3>
+            <p class="service-card-desc">
+              Planting, mulching, sod installation, hydroseeding, and garden beds tailored to coastal soil and sun exposure.
+            </p>
+            <div class="service-features-list">
+              <div class="service-feature-item"><i data-lucide="check"></i> Sod rolls & hydroseeding</div>
+              <div class="service-feature-item"><i data-lucide="check"></i> Bark mulching & crisp bed edging</div>
+              <div class="service-feature-item"><i data-lucide="check"></i> Coastal perennials & shrub planting</div>
+            </div>
+            <div class="service-card-footer">
+              <a href="lawn-garden-care.html" class="service-card-link">
+                Learn More <i data-lucide="arrow-right"></i>
+              </a>
+              <a href="#contact" class="btn btn-sm btn-secondary">Get Quote</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 02: Lawn Maintenance -->
+        <article class="service-card">
+          <div class="service-card-img-wrap">
+            <span class="service-num">02</span>
+            <img src="Images/IMG_4633%20(Custom).JPG" alt="Giovanni mowing clean stripes on lawn" class="service-card-img" loading="lazy">
+          </div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">Lawn Maintenance</h3>
+            <p class="service-card-desc">
+              Consistent weekly or bi-weekly mowing with commercial sharp blades, precision string trimming, and clean power blowing.
+            </p>
+            <div class="service-features-list">
+              <div class="service-feature-item"><i data-lucide="check"></i> Sharp-blade clean striping</div>
+              <div class="service-feature-item"><i data-lucide="check"></i> Precision edge trimming along walks</div>
+              <div class="service-feature-item"><i data-lucide="check"></i> Debris power blowing off hard surfaces</div>
+            </div>
+            <div class="service-card-footer">
+              <a href="lawn-maintenance.html" class="service-card-link">
+                Learn More <i data-lucide="arrow-right"></i>
+              </a>
+              <a href="#contact" class="btn btn-sm btn-secondary">Get Quote</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 03: Stonework & Patios -->
+        <article class="service-card">
+          <div class="service-card-img-wrap">
+            <span class="service-num">03</span>
+            <img src="Images/71448769758__C1B601E6-423F-4C0E-A029-43FECD8663C5%20(Custom).jpeg" alt="Paver patio with sitting wall constructed by Giovanni" class="service-card-img" loading="lazy">
+          </div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">Stonework & Patios</h3>
+            <p class="service-card-desc">
+              Custom paver patios, pool decks, walkways, granite steps, and structural stone retaining walls that function as outdoor rooms.
+            </p>
+            <div class="service-features-list">
+              <div class="service-feature-item"><i data-lucide="check"></i> Dry-laid & wet-laid masonry</div>
+              <div class="service-feature-item"><i data-lucide="check"></i> Bluestone, pavers & fieldstone</div>
+              <div class="service-feature-item"><i data-lucide="check"></i> Compacted crushed-stone bases</div>
+            </div>
+            <div class="service-card-footer">
+              <a href="stonework.html" class="service-card-link">
+                Learn More <i data-lucide="arrow-right"></i>
+              </a>
+              <a href="#contact" class="btn btn-sm btn-secondary">Get Quote</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 04: Dumpster Rentals (Featured) -->
+        <article class="service-card" style="border: 2px solid var(--accent); box-shadow: var(--shadow-lg);">
+          <div class="service-card-img-wrap">
+            <span class="service-num">04</span>
+            <span class="service-card-badge badge-new-service">High Demand</span>
+            <img src="Images/Dumpster_Rentals_Giovanni_Truck_10.jpeg" alt="Giovanni Lawn Care roll-off dumpster truck at headquarters" class="service-card-img" loading="lazy">
+          </div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">Roll-Off Dumpster Rentals</h3>
+            <p class="service-card-desc">
+              Convenient, driveway-safe roll-off container rentals for yard waste, home cleanouts, remodeling, and construction debris.
+            </p>
+            <div class="service-features-list">
+              <div class="service-feature-item"><i data-lucide="check"></i> <strong>12, 15, 20 & 25 yard</strong> sizes available</div>
+              <div class="service-feature-item"><i data-lucide="check"></i> Yard waste, estate cleanout & construction</div>
+              <div class="service-feature-item"><i data-lucide="check"></i> Driveway-safe hooklift truck delivery</div>
+            </div>
+            <div class="service-card-footer">
+              <a href="dumpster-rentals.html" class="service-card-link">
+                Learn More <i data-lucide="arrow-right"></i>
+              </a>
+              <a href="tel:+18606626293" class="btn btn-sm btn-call">Call to Book</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 05: Beach Cleaning (Featured) -->
+        <article class="service-card" style="border: 2px solid #0284c7; box-shadow: var(--shadow-lg);">
+          <div class="service-card-img-wrap">
+            <span class="service-num">05</span>
+            <span class="service-card-badge" style="background: #0284c7;">New Service</span>
+            <img src="Images/Beach_Cleaning_Barber_Surf_Rake_Equipment.jpeg" alt="Barber Surf Rake Beach Cleaning equipment" class="service-card-img" loading="lazy">
+          </div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">Shoreline Beach Cleaning</h3>
+            <p class="service-card-desc">
+              Professional Barber Surf Rake mechanical sand sifting and shoreline grooming for private beachfronts and beach associations.
+            </p>
+            <div class="service-features-list">
+              <div class="service-feature-item"><i data-lucide="check"></i> Sifts out sharp shells, glass & buried trash</div>
+              <div class="service-feature-item"><i data-lucide="check"></i> Removes rotting seaweed, kelp & insects</div>
+              <div class="service-feature-item"><i data-lucide="check"></i> Low-impact dune and coastal berm protection</div>
+            </div>
+            <div class="service-card-footer">
+              <a href="beach-cleaning.html" class="service-card-link">
+                Learn More <i data-lucide="arrow-right"></i>
+              </a>
+              <a href="#contact" class="btn btn-sm btn-secondary">Get Quote</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 06: Spring & Fall Cleanup -->
+        <article class="service-card">
+          <div class="service-card-img-wrap">
+            <span class="service-num">06</span>
+            <img src="Images/leaf_blower.jpg" alt="Commercial leaf cleanup with high-powered leaf blower" class="service-card-img" loading="lazy">
+          </div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">Spring & Fall Cleanup</h3>
+            <p class="service-card-desc">
+              Clear away fallen leaves, pine needles, storm branches, and seasonal debris so your turf stays healthy without mold or rot.
+            </p>
+            <div class="service-features-list">
+              <div class="service-feature-item"><i data-lucide="check"></i> Commercial truck-mounted vacuum loaders</div>
+              <div class="service-feature-item"><i data-lucide="check"></i> Garden bed prep, raking & perennial cutbacks</div>
+              <div class="service-feature-item"><i data-lucide="check"></i> 100% complete yard debris haul-away</div>
+            </div>
+            <div class="service-card-footer">
+              <a href="spring-fall-cleanup.html" class="service-card-link">
+                Learn More <i data-lucide="arrow-right"></i>
+              </a>
+              <a href="#contact" class="btn btn-sm btn-secondary">Get Quote</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 07: Snow & Ice Removal -->
+        <article class="service-card">
+          <div class="service-card-img-wrap">
+            <span class="service-num">07</span>
+            <img src="Images/unnamed-1-scaled.jpg" alt="Giovanni crew snowblowing driveway with plow truck" class="service-card-img" loading="lazy">
+          </div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">Snow & Ice Removal</h3>
+            <p class="service-card-desc">
+              Commercial & residential snow plowing, walkway shoveling, and ice-melt treatments tailored to your property layout.
+            </p>
+            <div class="service-features-list">
+              <div class="service-feature-item"><i data-lucide="check"></i> Commercial parking lots & private roads</div>
+              <div class="service-feature-item"><i data-lucide="check"></i> Residential driveway snow plowing</div>
+              <div class="service-feature-item"><i data-lucide="check"></i> 24/7 winter storm rapid response</div>
+            </div>
+            <div class="service-card-footer">
+              <a href="snow-ice-removal.html" class="service-card-link">
+                Learn More <i data-lucide="arrow-right"></i>
+              </a>
+              <a href="#contact" class="btn btn-sm btn-secondary">Get Quote</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FEATURE SPOTLIGHT 1: ROLL-OFF DUMPSTER RENTALS
+       ========================================================================== -->
+  <section class="feature-spotlight" id="dumpsters-spotlight">
+    <div class="container">
+      <div class="spotlight-grid">
+        <div class="spotlight-images">
+          <img src="Images/Dumpster_Rentals_Truck_Trailer_01.jpg" alt="Giovanni hooklift dumpster truck towing excavator along Connecticut shoreline" class="spotlight-img-main" loading="lazy">
+          <img src="Images/Dumpster_Rentals_Giovanni_Truck_11.jpeg" alt="Giovanni Lawn Care hooklift truck and roll-off container" class="spotlight-img-float" loading="lazy">
+        </div>
+        <div class="spotlight-content">
+          <span class="spotlight-badge"><i data-lucide="truck"></i> High Priority Shoreline Service</span>
+          <h2 class="spotlight-title">Reliable Roll-Off Dumpster Rentals on the Shoreline</h2>
+          <p class="spotlight-lead">
+            Convenient, driveway-safe dumpster rentals in <strong>12, 15, 20, and 25 cubic yard sizes</strong> for yard waste, home cleanouts, and construction debris—scheduled around your timeline with prompt hooklift drop-off and pickup.
+          </p>
+
+          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; margin: 1.5rem 0;">
+            <a href="dumpster-rentals.html#dumpsterEstimator" class="size-box" style="padding: 0.85rem 0.4rem; text-decoration: none; color: inherit;">
+              <div class="size-tag" style="font-size: 1.35rem; color: var(--primary);">12 Yd</div>
+              <div class="size-name" style="font-size: 0.8rem;">Small Cleanouts</div>
+              <div class="size-ideal" style="font-size: 0.72rem;">~4–5 Pickup Loads</div>
+            </a>
+            <a href="dumpster-rentals.html#dumpsterEstimator" class="size-box" style="padding: 0.85rem 0.4rem; text-decoration: none; color: inherit;">
+              <div class="size-tag" style="font-size: 1.35rem; color: var(--primary);">15 Yd</div>
+              <div class="size-name" style="font-size: 0.8rem;">Medium Remodel</div>
+              <div class="size-ideal" style="font-size: 0.72rem;">~6–7 Pickup Loads</div>
+            </a>
+            <a href="dumpster-rentals.html#dumpsterEstimator" class="size-box" style="padding: 0.85rem 0.4rem; border-color: var(--accent); background: #f7fee7; text-decoration: none; color: inherit;">
+              <div class="size-tag" style="font-size: 1.35rem; color: var(--primary);">20 Yd</div>
+              <div class="size-name" style="font-size: 0.8rem; font-weight: 800;">★ Popular</div>
+              <div class="size-ideal" style="font-size: 0.72rem;">~8–9 Pickup Loads</div>
+            </a>
+            <a href="dumpster-rentals.html#dumpsterEstimator" class="size-box" style="padding: 0.85rem 0.4rem; text-decoration: none; color: inherit;">
+              <div class="size-tag" style="font-size: 1.35rem; color: var(--primary);">25 Yd</div>
+              <div class="size-name" style="font-size: 0.8rem;">Max Volume</div>
+              <div class="size-ideal" style="font-size: 0.72rem;">~10–12 Pickup Loads</div>
+            </a>
+          </div>
+
+          <div class="step-cards-list">
+            <div class="step-card">
+              <span class="step-badge">01</span>
+              <div class="step-info">
+                <h4>Tell Us About Your Project</h4>
+                <p>Call (860) 662-6293 and let us know what you're clearing out and when you need it.</p>
+              </div>
+            </div>
+            <div class="step-card">
+              <span class="step-badge">02</span>
+              <div class="step-info">
+                <h4>Driveway-Safe Delivery</h4>
+                <p>We coordinate careful placement that protects your pavement or driveway surface.</p>
+              </div>
+            </div>
+            <div class="step-card">
+              <span class="step-badge">03</span>
+              <div class="step-info">
+                <h4>Fill on Your Schedule</h4>
+                <p>Load your yard brush, household cleanout junk, or remodeling debris at your own pace.</p>
+              </div>
+            </div>
+            <div class="step-card">
+              <span class="step-badge">04</span>
+              <div class="step-info">
+                <h4>Prompt Haul-Away</h4>
+                <p>Call us when filled, and our hooklift truck hauls everything away cleanly.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="dumpster-rentals.html#dumpsterEstimator" class="btn btn-primary btn-lg">
+              <i data-lucide="calculator"></i> Try Dumpster Size Estimator
+            </a>
+            <a href="tel:+18606626293" class="btn btn-call btn-lg">
+              <i data-lucide="phone"></i> Call (860) 662-6293
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FEATURE SPOTLIGHT 2: SHORELINE BEACH CLEANING
+       ========================================================================== -->
+  <section class="feature-spotlight bg-sand" id="beach-spotlight">
+    <div class="container">
+      <div class="spotlight-grid reverse">
+        <div class="spotlight-images">
+          <img src="Images/Beach_Cleaning_Barber_Surf_Rake_Tractor.jpeg" alt="John Deere tractor pulling Barber Surf Rake for mechanical sand grooming" class="spotlight-img-main" loading="lazy">
+          <img src="Images/Beach_Cleaning_Barber_Surf_Rake_Equipment.jpeg" alt="Barber Surf Rake sand sifting hopper detail" class="spotlight-img-float" loading="lazy">
+        </div>
+        <div class="spotlight-content">
+          <span class="spotlight-badge" style="color: #0284c7;"><i data-lucide="waves"></i> Coastal Specialty</span>
+          <h2 class="spotlight-title">Professional Barber Surf Rake Sand Grooming</h2>
+          <p class="spotlight-lead">
+            Don’t let rotting seaweed wrack, sharp clam shells, and buried storm flotsam ruin your coastal waterfront. We leave private beachfronts and beach associations velvet-smooth.
+          </p>
+
+          <div class="step-cards-list">
+            <div class="step-card">
+              <span class="step-badge" style="color: #0284c7; background: #e0f2fe;">Safe</span>
+              <div class="step-info">
+                <h4>Bare-Foot Safe Sand</h4>
+                <p>Mechanical sifting removes broken glass, sharp shells, small rocks, and buried debris.</p>
+              </div>
+            </div>
+            <div class="step-card">
+              <span class="step-badge" style="color: #0284c7; background: #e0f2fe;">Clean</span>
+              <div class="step-info">
+                <h4>Odor & Fly Prevention</h4>
+                <p>Hauls away rotting kelp before it ferments in the summer sun and attracts swarms of gnats.</p>
+              </div>
+            </div>
+            <div class="step-card">
+              <span class="step-badge" style="color: #0284c7; background: #e0f2fe;">Dual</span>
+              <div class="step-info">
+                <h4>Dumpster Support Included</h4>
+                <p>We own our roll-off dumpsters, meaning massive storm debris loads are hauled off immediately.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="beach-cleaning.html" class="btn btn-primary btn-lg">
+              Explore Beach Cleaning Services <i data-lucide="arrow-right"></i>
+            </a>
+            <a href="#contact" class="btn btn-secondary btn-lg">
+              Schedule Shoreline Assessment <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       INTERACTIVE BEFORE & AFTER HARDSCAPING COMPARISON
+       ========================================================================== -->
+  <section class="section" id="comparison">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Craftsmanship In Progress</span>
+        <h2 class="section-title">See the Transformation: Base Preparation to Finished Patio</h2>
+        <p class="section-desc">
+          Drag the slider to compare the crushed-stone compacted base preparation with the finished paver pool patio. Great hardscaping starts with what's underneath.
+        </p>
+      </div>
+
+      <div class="before-after-wrap" id="beforeAfterSlider">
+        <!-- After Image (Full width background) -->
+        <img src="Images/Stonework_Pool_Paver_Patio_Overview.jpg" alt="Finished paver patio around pool built by Giovanni" class="before-after-img">
+        <span class="ba-badge after">After: Finished Patio</span>
+
+        <!-- Before Image (Clipped overlay) -->
+        <div class="before-after-overlay">
+          <img src="Images/IMG_2733%20(Custom).jpeg" alt="Crushed stone compaction base preparation in progress" class="before-after-img">
+          <span class="ba-badge before">Before: Base Prep</span>
+        </div>
+
+        <!-- Draggable Handle -->
+        <div class="slider-handle">
+          <div class="handle-button">
+            <i data-lucide="chevrons-left-right"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ABOUT US / GIOVANNI'S STORY SECTION
+       ========================================================================== -->
+  <section class="section bg-sand" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-column">
+          <img src="Images/Giovanni.jpg" alt="Giovanni Sanchez, Owner and Founder of Giovanni Lawn Care LLC" class="about-main-img" loading="lazy">
+          <div class="experience-badge">
+            <span class="exp-years">20+</span>
+            <span class="exp-text">Years of Experience</span>
+          </div>
+        </div>
+
+        <div class="about-content-column">
+          <span class="section-label">The Giovanni Difference — Established 2010</span>
+          <h2 class="section-title">Built on hard work. Known for good work.</h2>
+
+          <div class="story-quote-block">
+            <p>
+              "Giovanni Lawn Care was established in 2010 by its owner, Giovanni Sanchez, who came from very humble beginnings. Giovanni started in the landscape industry during his teenage years and continued as a young adult to earn extra money while working a full-time manufacturing job."
+            </p>
+            <p>
+              "When he lost his manufacturing job due to the economy crashing, Giovanni found himself working several jobs to make ends meet. Giovanni began to think of what he could do to earn a living—something he felt passionate about that would allow him to provide for his growing family. He decided to invest what little he had in a lawn mower, a trailer, and a few power tools—this was just the beginning."
+            </p>
+            <p>
+              "He worked evenings and weekends around his full-time shifts, working 12 or more hours a day, 7 days a week. Phone calls started pouring in. Today, with over 20 years of hands-on experience, Giovanni’s main focus is to deliver quality work, exceptional service, and green lawns across the Connecticut Shoreline."
+            </p>
+          </div>
+
+          <div class="values-grid">
+            <div class="value-item">
+              <div class="value-check"><i data-lucide="check"></i></div>
+              <div>
+                <div class="value-title">Locally Owned & Family Operated</div>
+                <div class="value-desc">Proudly based right here in Westbrook, CT since 2010.</div>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-check"><i data-lucide="check"></i></div>
+              <div>
+                <div class="value-title">Uniformed & Supervised Crew</div>
+                <div class="value-desc">Professional, courteous team members wearing official company uniforms.</div>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-check"><i data-lucide="check"></i></div>
+              <div>
+                <div class="value-title">Commercial Equipment</div>
+                <div class="value-desc">Barber Surf Rakes, hooklift trucks, and commercial mowers.</div>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-check"><i data-lucide="check"></i></div>
+              <div>
+                <div class="value-title">Fully Licensed & Insured</div>
+                <div class="value-desc">Complete liability coverage for residential & commercial properties.</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="#contact" class="btn btn-primary btn-lg">
+              Work With Giovanni <i data-lucide="arrow-right"></i>
+            </a>
+            <a href="why-choose-us.html" class="btn btn-outline btn-lg">
+              Compare Our Standards <i data-lucide="shield-check"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PORTFOLIO / BEFORE & AFTER GALLERY
+       ========================================================================== -->
+  <section class="section" id="work">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Real Projects</span>
+        <h2 class="section-title">Good Work Speaks for Itself</h2>
+        <p class="section-desc">
+          A look at recent stonework, lawn installations, beach grooming, and property transformations from around the Connecticut Shoreline.
+        </p>
+      </div>
+
+      <!-- Gallery Filter Buttons -->
+      <div class="gallery-filter-bar">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="stonework">Stonework & Patios</button>
+        <button class="filter-btn" data-filter="lawn">Lawns & Hydroseeding</button>
+        <button class="filter-btn" data-filter="dumpsters">Dumpsters & Cleanups</button>
+        <button class="filter-btn" data-filter="beach">Beach Cleaning</button>
+        <button class="filter-btn" data-filter="winter">Snow Removal</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid">
+
+        <!-- 1: Pool Paver Patio -->
+        <div class="gallery-item" data-category="stonework">
+          <img src="Images/Stonework_Pool_Paver_Patio_Overview.jpg" alt="Custom Paver Patio Around Pool" class="gallery-thumb" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-category">Stonework & Patios</span>
+            <div class="gallery-item-title">Completed Paver Pool Patio</div>
+          </div>
+        </div>
+
+        <!-- 2: Sitting Wall Patio -->
+        <div class="gallery-item" data-category="stonework">
+          <img src="Images/71448769758__C1B601E6-423F-4C0E-A029-43FECD8663C5%20(Custom).jpeg" alt="Paver Patio with Sitting Wall" class="gallery-thumb" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-category">Stonework & Patios</span>
+            <div class="gallery-item-title">Paver Patio & Block Sitting Wall</div>
+          </div>
+        </div>
+
+        <!-- 3: Paver Walkway with Hydrangeas -->
+        <div class="gallery-item" data-category="stonework">
+          <img src="Images/IMG_1911%20(Custom).jpeg" alt="Paver Walkway with Hydrangea Flower Border" class="gallery-thumb" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-category">Stonework & Patios</span>
+            <div class="gallery-item-title">Walkway Paver Border & Hydrangeas</div>
+          </div>
+        </div>
+
+        <!-- 4: Granite Steps Installation -->
+        <div class="gallery-item" data-category="stonework">
+          <img src="Images/IMG_1619%20(Custom).jpeg" alt="Granite Steps and Foundation Masonry" class="gallery-thumb" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-category">Stonework & Patios</span>
+            <div class="gallery-item-title">Granite Entry Steps & Wall Masonry</div>
+          </div>
+        </div>
+
+        <!-- 5: Fresh Sod Installation by Patio -->
+        <div class="gallery-item" data-category="lawn">
+          <img src="Images/Lawn_Garden_Care_Sod_Installation.jpg" alt="Crew Installing Sod Rolls" class="gallery-thumb" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-category">Lawns & Hydroseeding</span>
+            <div class="gallery-item-title">Lush Sod Turf Installation</div>
+          </div>
+        </div>
+
+        <!-- 6: Hydroseeding Application -->
+        <div class="gallery-item" data-category="lawn">
+          <img src="Images/Lawn_Garden_Care_Hydroseeding.jpeg" alt="Residential Lawn Hydroseeding" class="gallery-thumb" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-category">Lawns & Hydroseeding</span>
+            <div class="gallery-item-title">Coastal Hydroseeding Application</div>
+          </div>
+        </div>
+
+        <!-- 7: Planting & Mulching Bed -->
+        <div class="gallery-item" data-category="lawn">
+          <img src="Images/Lawn_Garden_Care_Planting_Mulching.jpeg" alt="Planting Perennials and Dark Bark Mulch" class="gallery-thumb" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-category">Lawns & Hydroseeding</span>
+            <div class="gallery-item-title">Bed Edging, Planting & Mulching</div>
+          </div>
+        </div>
+
+        <!-- 8: Barber Surf Rake Tractor -->
+        <div class="gallery-item" data-category="beach">
+          <img src="Images/Beach_Cleaning_Barber_Surf_Rake_Tractor.jpeg" alt="Barber Surf Rake Beach Cleaning Machine" class="gallery-thumb" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-category">Beach Cleaning</span>
+            <div class="gallery-item-title">Barber Surf Rake Sand Sifter</div>
+          </div>
+        </div>
+
+        <!-- 9: Hooklift Dumpster Truck Delivery -->
+        <div class="gallery-item" data-category="dumpsters">
+          <img src="Images/Dumpster_Rentals_Truck_Trailer_01.jpg" alt="Giovanni Hooklift Truck Carrying Dumpster Container" class="gallery-thumb" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-category">Dumpsters & Cleanups</span>
+            <div class="gallery-item-title">Roll-Off Dumpster Delivery Truck</div>
+          </div>
+        </div>
+
+        <!-- 9b: Dumpster Truck at Headquarters (Truck 10) -->
+        <div class="gallery-item" data-category="dumpsters">
+          <img src="Images/Dumpster_Rentals_Giovanni_Truck_10.jpeg" alt="Giovanni Lawn Care Roll-Off Dumpster Truck at Westbrook Headquarters" class="gallery-thumb" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-category">Dumpsters & Cleanups</span>
+            <div class="gallery-item-title">Roll-Off Container & Hooklift Truck</div>
+          </div>
+        </div>
+
+        <!-- 9c: Dumpster Fleet & Sign (Truck 11) -->
+        <div class="gallery-item" data-category="dumpsters">
+          <img src="Images/Dumpster_Rentals_Giovanni_Truck_11.jpeg" alt="Giovanni Dumpster Rental Fleet at Westbrook CT Yard" class="gallery-thumb" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-category">Dumpsters & Cleanups</span>
+            <div class="gallery-item-title">Driveway-Safe Dumpster Fleet</div>
+          </div>
+        </div>
+
+        <!-- 10: Fall Leaf Cleanup Truck -->
+        <div class="gallery-item" data-category="dumpsters">
+          <img src="Images/IMG_1567-Medium-1024x738-1.jpg" alt="Leaf Vacuum Truck for Fall Cleanup" class="gallery-thumb" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-category">Dumpsters & Cleanups</span>
+            <div class="gallery-item-title">Commercial Leaf Vacuum Loader</div>
+          </div>
+        </div>
+
+        <!-- 11: Snow Plow Fleet -->
+        <div class="gallery-item" data-category="winter">
+          <img src="Images/IMG_1853-Custom.jpg" alt="Giovanni Snow Plow Truck Fleet" class="gallery-thumb" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-category">Snow Removal</span>
+            <div class="gallery-item-title">Commercial Snow Plow Fleet</div>
+          </div>
+        </div>
+
+        <!-- 12: Sidewalk Snowblowing -->
+        <div class="gallery-item" data-category="winter">
+          <img src="Images/unnamed-1-scaled.jpg" alt="Snowblowing Walkways in Winter Storm" class="gallery-thumb" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-category">Snow Removal</span>
+            <div class="gallery-item-title">Walkway Clearing & Snowblower Crew</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-label="Image preview">
+    <div class="lightbox-content">
+      <button class="lightbox-close" aria-label="Close image preview">&times;</button>
+      <img src="" alt="" class="lightbox-img">
+      <div class="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       CUSTOMER REVIEWS & TESTIMONIALS
+       ========================================================================== -->
+  <section class="section bg-sand" id="reviews">
+    <div class="container">
+      <div class="section-header" style="text-align: center; max-width: 780px; margin: 0 auto 3rem auto;">
+        <span class="section-label">Shoreline Reputation</span>
+        <h2 class="section-title">Trusted by Your Shoreline Neighbors</h2>
+        <p class="section-desc">
+          Proudly serving over 170+ recurring residential and commercial properties across Westbrook, Clinton, Madison, Old Saybrook, and surrounding Connecticut coastal towns.
+        </p>
+        <a href="https://maps.app.goo.gl/Fzua5mqUQS7tMDCR9" target="_blank" rel="noopener noreferrer" class="google-rating-banner">
+          <svg class="google-verified-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+            <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
+            <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.14-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+            <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+          </svg>
+          <span>5.0 Rating • Verified on Google Maps</span>
+          <i data-lucide="external-link" style="width: 15px; height: 15px; margin-left: 0.25rem;"></i>
+        </a>
+      </div>
+
+      <div class="reviews-grid">
+        <!-- Review 1: Dave B (Imported from Google Maps) -->
+        <article class="review-card">
+          <div class="review-header">
+            <div class="review-stars">★★★★★</div>
+            <span class="google-badge-tag">
+              <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true">
+                <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+                <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
+                <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.14-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+                <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+              </svg>
+              Google Review
+            </span>
+          </div>
+          <p class="review-text">
+            "After 2 seasons of lawn care and fall cleanup I have to say Giovanni’s crews are meticulous and reliable. Great communications and a fair price. Thanks for everything!"
+          </p>
+          <div class="review-author">
+            <div class="author-avatar">DB</div>
+            <div>
+              <div class="author-name">Dave B.</div>
+              <div class="author-town">Local Guide • Lawn Care & Fall Cleanup</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Review 2: Martha Lindberg-Salvati (Imported from Google Maps) -->
+        <article class="review-card">
+          <div class="review-header">
+            <div class="review-stars">★★★★★</div>
+            <span class="google-badge-tag">
+              <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true">
+                <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+                <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
+                <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.14-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+                <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+              </svg>
+              Google Review
+            </span>
+          </div>
+          <p class="review-text">
+            "I have nothing but high praise for Giovanni’s Lawn Care. What his crew accomplished in one day was nothing short of amazing. The side of our house was a jungle of overgrown vegetation that became impossible to tackle. The gardens and stonewalls were covered in ivy. At the end of the day all of it miraculously vanished leaving me with a blank slate. Thank you Giovanni for turning my jungle into a garden!"
+          </p>
+          <div class="review-author">
+            <div class="author-avatar">ML</div>
+            <div>
+              <div class="author-name">Martha Lindberg-Salvati</div>
+              <div class="author-town">Westbrook Area • Garden & Stonewall Restoration</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Review 3: Wyatt Burgoyne (Imported from Google Maps) -->
+        <article class="review-card">
+          <div class="review-header">
+            <div class="review-stars">★★★★★</div>
+            <span class="google-badge-tag">
+              <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true">
+                <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+                <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
+                <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.14-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+                <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+              </svg>
+              Google Review
+            </span>
+          </div>
+          <p class="review-text">
+            "Giovanni Lawn Care LLC does incredible work and are very detail oriented. While tending to all needs relating lawn maintenance, Giovanni and his employees go above and beyond in other areas as well. Very accommodating. I highly recommend them for lawn care, and not to mention they do a great job plowing in the winter as well!"
+          </p>
+          <div class="review-author">
+            <div class="author-avatar">WB</div>
+            <div>
+              <div class="author-name">Wyatt Burgoyne</div>
+              <div class="author-town">Shoreline CT • Lawn Care & Winter Snow Plowing</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Review 4: Chase Walker (Imported from Google Maps) -->
+        <article class="review-card">
+          <div class="review-header">
+            <div class="review-stars">★★★★★</div>
+            <span class="google-badge-tag">
+              <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true">
+                <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+                <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
+                <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.14-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+                <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+              </svg>
+              Google Review
+            </span>
+          </div>
+          <p class="review-text">
+            "Over our years with Giovanni, I have found that they do a very good job. Generally shows up when expected. Overall happy with the service that has been provided."
+          </p>
+          <div class="review-author">
+            <div class="author-avatar">CW</div>
+            <div>
+              <div class="author-name">Chase Walker</div>
+              <div class="author-town">Shoreline CT • Lawn Mowing & Maintenance</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Review 5: Roberta Alexy Nieves (Imported from Google Maps) -->
+        <article class="review-card">
+          <div class="review-header">
+            <div class="review-stars">★★★★★</div>
+            <span class="google-badge-tag">
+              <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true">
+                <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+                <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
+                <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.14-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+                <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+              </svg>
+              Google Review
+            </span>
+          </div>
+          <p class="review-text">
+            "Giovanni Lawn Care was completely professional about resolving our property's needs. I revised my review to five stars for their responsiveness to customer communication and their professionalism in making sure the job is done right. I absolutely recommend and continue paying for services through Giovanni's Lawn Care!"
+          </p>
+          <div class="review-author">
+            <div class="author-avatar">RN</div>
+            <div>
+              <div class="author-name">Roberta Alexy Nieves</div>
+              <div class="author-town">Shoreline CT • Seasonal Cleanups & Property Care</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Review 6: Thomas C. (Roll-Off Dumpsters) -->
+        <article class="review-card">
+          <div class="review-header">
+            <div class="review-stars">★★★★★</div>
+            <span class="google-badge-tag">
+              <i data-lucide="shield-check" style="width: 13px; height: 13px;"></i>
+              Verified Customer
+            </span>
+          </div>
+          <p class="review-text">
+            "Rented a 20-yard roll-off dumpster for a major renovation and yard overhaul. Giovanni delivered it right on time, placed protective wood boards to protect my asphalt driveway, and picked it up within 2 hours of me calling. Super seamless process and great communication."
+          </p>
+          <div class="review-author">
+            <div class="author-avatar">TC</div>
+            <div>
+              <div class="author-name">Thomas C.</div>
+              <div class="author-town">Clinton, CT • Roll-Off Dumpster Rental</div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div style="display: flex; justify-content: center; align-items: center; gap: 1rem; flex-wrap: wrap; margin-top: 3rem;">
+        <a href="tel:+18606626293" class="btn btn-call btn-lg">
+          <i data-lucide="phone"></i> Call (860) 662-6293 for a Free Estimate
+        </a>
+        <a href="https://maps.app.goo.gl/Fzua5mqUQS7tMDCR9" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-lg">
+          <svg class="google-verified-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style="margin-right: 0.35rem;">
+            <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+            <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
+            <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.14-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+            <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+          </svg>
+          View All Reviews on Google Maps
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SERVICE AREA (10 CT SHORELINE TOWNS)
+       ========================================================================== -->
+  <section class="section">
+    <div class="container">
+      <div class="service-area-box">
+        <div style="text-align: center; max-width: 680px; margin: 0 auto;">
+          <span class="section-label light">Shoreline Coverage</span>
+          <h2 style="color: #ffffff; margin-bottom: 1rem;">Proudly Serving 10 Connecticut Shoreline Towns</h2>
+          <p style="color: #cbd5e1; font-size: 1.05rem;">
+            Headquartered in Westbrook, CT, our fleet provides residential, commercial, and beach association services across the entire shoreline and lower valley.
+          </p>
+        </div>
+
+        <div class="towns-grid">
+          <div class="town-card">
+            <i data-lucide="map-pin"></i>
+            <div class="town-name">Westbrook, CT</div>
+            <small style="opacity: 0.8;">Headquarters</small>
+          </div>
+          <div class="town-card">
+            <i data-lucide="map-pin"></i>
+            <div class="town-name">Clinton, CT</div>
+            <small style="opacity: 0.8;">Daily Service</small>
+          </div>
+          <div class="town-card">
+            <i data-lucide="map-pin"></i>
+            <div class="town-name">Madison, CT</div>
+            <small style="opacity: 0.8;">Daily Service</small>
+          </div>
+          <div class="town-card">
+            <i data-lucide="map-pin"></i>
+            <div class="town-name">Guilford, CT</div>
+            <small style="opacity: 0.8;">Daily Service</small>
+          </div>
+          <div class="town-card">
+            <i data-lucide="map-pin"></i>
+            <div class="town-name">Old Saybrook, CT</div>
+            <small style="opacity: 0.8;">Daily Service</small>
+          </div>
+          <div class="town-card">
+            <i data-lucide="map-pin"></i>
+            <div class="town-name">Killingworth, CT</div>
+            <small style="opacity: 0.8;">Scheduled Service</small>
+          </div>
+          <div class="town-card">
+            <i data-lucide="map-pin"></i>
+            <div class="town-name">Deep River, CT</div>
+            <small style="opacity: 0.8;">Scheduled Service</small>
+          </div>
+          <div class="town-card">
+            <i data-lucide="map-pin"></i>
+            <div class="town-name">Essex, CT</div>
+            <small style="opacity: 0.8;">Scheduled Service</small>
+          </div>
+          <div class="town-card">
+            <i data-lucide="map-pin"></i>
+            <div class="town-name">Ivoryton, CT</div>
+            <small style="opacity: 0.8;">Scheduled Service</small>
+          </div>
+          <div class="town-card">
+            <i data-lucide="map-pin"></i>
+            <div class="town-name">Chester, CT</div>
+            <small style="opacity: 0.8;">Scheduled Service</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FREQUENTLY ASKED QUESTIONS (ACCORDION)
+       ========================================================================== -->
+  <section class="section bg-sand" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Common Inquiries</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-desc">
+          Everything you need to know about our services, estimates, crew, equipment, and dumpster policies.
+        </p>
+      </div>
+
+      <div class="faq-list">
+
+        <!-- FAQ 1 -->
+        <div class="faq-item active">
+          <button class="faq-question">
+            <span>Who will be working on my property?</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="faq-answer" style="max-height: 200px;">
+            <p>
+              All work is performed by our well-trained, supervised crew using commercial-grade equipment. Every team member wears an official Giovanni Lawn Care company uniform so you always know who is on your property.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Do you work with both residential and commercial clients?</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Yes! We care for single-family homes, private beach associations, HOA communities, and commercial business properties across the Connecticut Shoreline.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How often should my lawn be mowed?</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>
+              We offer both weekly and bi-weekly mowing. We strongly recommend weekly mowing during the main growing season because it keeps grass healthier and prevents clumping, uneven cuts, and lawn fungus.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Why don't you list fixed prices on your website?</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Every yard, driveway, and stonework project is unique in size, access, terrain, and materials required. Instead of guessing with one-size-fits-all pricing, we provide fast, free, no-obligation quotes tailored to your exact property.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What sizes are your dumpsters and what can I put in them?</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>
+              We offer <strong>12, 15, 20, and 25 cubic yard</strong> roll-off containers to accommodate every residential project, yard cleanup, or commercial job site across the Connecticut Shoreline. All dumpsters feature ground-level rear walk-in doors and are delivered using our driveway-safe hooklift trucks. Containers are ideal for yard waste, storm brush, branches, estate decluttering, and construction or remodeling debris. Because state regulations restrict hazardous materials (such as wet paint, hazardous chemicals, liquids, and tires), please mention your debris when calling (860) 662-6293 and we will confirm all loading guidelines upfront.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Are you licensed and insured?</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Yes! Giovanni Lawn Care LLC is fully licensed and insured for residential and commercial landscaping, hardscaping, snow removal, and roll-off dumpster services in Connecticut.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 7 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What towns do you serve?</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>
+              We serve 10 towns along Connecticut's Shoreline and lower Connecticut River Valley: Westbrook, Clinton, Madison, Guilford, Old Saybrook, Killingworth, Deep River, Essex, Ivoryton, and Chester.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CONTACT & FREE QUOTE ESTIMATE SECTION
+       ========================================================================== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Left: Direct Info Card -->
+        <div class="contact-info-card">
+          <span class="section-label">Get in Touch</span>
+          <h2 style="font-size: 2rem; margin-bottom: 0.75rem;">Let’s make your outdoor space shine.</h2>
+          <p style="margin-bottom: 1.5rem;">
+            Tell us about your property or project. Call Giovanni directly or request a free, no-obligation on-site estimate.
+          </p>
+
+          <div class="contact-methods">
+            <div class="contact-method-item">
+              <div class="contact-icon-box"><i data-lucide="phone-call"></i></div>
+              <div>
+                <div class="contact-method-title">Direct Phone</div>
+                <div class="contact-method-val">
+                  <a href="tel:+18606626293" style="color: var(--brand-red);">(860) 662-6293</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-method-item">
+              <div class="contact-icon-box"><i data-lucide="mail"></i></div>
+              <div>
+                <div class="contact-method-title">Email</div>
+                <div class="contact-method-val">
+                  <a href="mailto:giovannilawncare@gmail.com">giovannilawncare@gmail.com</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-method-item">
+              <div class="contact-icon-box"><i data-lucide="map-pin"></i></div>
+              <div>
+                <div class="contact-method-title">Headquarters</div>
+                <div class="contact-method-val">
+                  196 Boston Post Rd<br>Westbrook, CT 06498
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-method-item">
+              <div class="contact-icon-box"><i data-lucide="clock"></i></div>
+              <div>
+                <div class="contact-method-title">Hours of Operation</div>
+                <div class="contact-method-val" style="font-size: 0.95rem; font-weight: 500;">
+                  Monday – Saturday: 8:00 AM – 5:00 PM<br>
+                  <small style="color: var(--accent); font-weight: 600;">(24/7 Winter Storm Snow Dispatch)</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="background: var(--bg-sand); padding: 1.25rem; border-radius: var(--radius-md); border-left: 4px solid var(--accent);">
+            <strong>Fast Response Guarantee:</strong> We return calls and quote requests promptly, typically within 24 business hours.
+          </div>
+        </div>
+
+        <!-- Right: Interactive Quote Form -->
+        <div class="quote-form-card">
+          <h3 style="font-size: 1.6rem; margin-bottom: 0.5rem; color: var(--secondary);">Request Your Free Estimate</h3>
+          <p style="font-size: 0.95rem; color: var(--text-muted);">
+            No obligation. We’ll review your project details and follow up with you directly.
+          </p>
+
+          <form id="quoteForm" class="form-grid">
+            <input type="hidden" name="access_key" value="8d567192-0f5f-4c3e-ac81-654c6d48e397">
+            <div class="form-group">
+              <label class="form-label" for="userName">Your Full Name *</label>
+              <input type="text" id="userName" name="name" class="form-control" placeholder="e.g. John Smith" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="userPhone">Phone Number *</label>
+              <input type="tel" id="userPhone" name="phone" class="form-control" placeholder="e.g. (860) 123-4567" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="userEmail">Email Address</label>
+              <input type="email" id="userEmail" name="email" class="form-control" placeholder="john@example.com">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="userTown">Your Town *</label>
+              <select id="userTown" name="town" class="form-control" required>
+                <option value="" disabled selected>Select Shoreline Town</option>
+                <option value="Westbrook, CT">Westbrook, CT</option>
+                <option value="Clinton, CT">Clinton, CT</option>
+                <option value="Madison, CT">Madison, CT</option>
+                <option value="Guilford, CT">Guilford, CT</option>
+                <option value="Old Saybrook, CT">Old Saybrook, CT</option>
+                <option value="Killingworth, CT">Killingworth, CT</option>
+                <option value="Deep River, CT">Deep River, CT</option>
+                <option value="Essex, CT">Essex, CT</option>
+                <option value="Ivoryton, CT">Ivoryton, CT</option>
+                <option value="Chester, CT">Chester, CT</option>
+                <option value="Other Town">Other CT Town</option>
+              </select>
+            </div>
+
+            <div class="form-group full-width">
+              <label class="form-label" for="userService">Service Needed *</label>
+              <select id="userService" name="service" class="form-control" required>
+                <option value="" disabled selected>Select Primary Service</option>
+                <optgroup label="Roll-Off Dumpsters (Available Sizes)">
+                  <option value="12-Yard Dumpster Rental">12-Yard Dumpster (Small Cleanouts & Yard Waste)</option>
+                  <option value="15-Yard Dumpster Rental">15-Yard Dumpster (Medium Remodels & Cleanouts)</option>
+                  <option value="20-Yard Dumpster Rental">20-Yard Dumpster (Most Popular - Multi-Room & Renovations)</option>
+                  <option value="25-Yard Dumpster Rental">25-Yard Dumpster (Max Capacity - Large Renovations & Demo)</option>
+                  <option value="Roll-Off Dumpster Rental (Size TBD)">Roll-Off Dumpster Rental (Need Giovanni's Advice)</option>
+                </optgroup>
+                <optgroup label="Lawn Care & Property Services">
+                  <option value="Shoreline Beach Cleaning">Shoreline Beach Cleaning (Barber Surf Rake)</option>
+                  <option value="Stonework & Paver Patios">Stonework & Paver Patios / Retaining Walls</option>
+                  <option value="Lawn & Garden Care">Lawn & Garden Care (Sod, Hydroseeding, Mulch)</option>
+                  <option value="Weekly Lawn Maintenance">Weekly Lawn Maintenance</option>
+                  <option value="Spring / Fall Property Cleanup">Spring / Fall Property Cleanup</option>
+                  <option value="Snow & Ice Removal">Snow & Ice Removal</option>
+                  <option value="Multiple Outdoor Services">Multiple Outdoor Services</option>
+                </optgroup>
+              </select>
+            </div>
+
+            <div class="form-group full-width">
+              <label class="form-label" for="userNotes">Brief Description of Your Project</label>
+              <textarea id="userNotes" name="notes" class="form-control" placeholder="Tell us about your property size, timeline, or specific project requirements..."></textarea>
+            </div>
+
+            <div class="form-group full-width" style="margin-top: 0.5rem;">
+              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                <i data-lucide="send"></i> Request My Free Estimate
+              </button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       MAIN FOOTER
+       ========================================================================== -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Col 1: About & Logo -->
+        <div class="footer-col">
+          <img src="Images/LOGO-327x112-1-1.png" alt="Giovanni Lawn Care LLC Logo" style="height: 50px; width: auto; margin-bottom: 1.25rem; background: #ffffff; padding: 6px 12px; border-radius: var(--radius-sm);">
+          <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem;">
+            Established in 2010 by Giovanni Sanchez. Providing dependable property care, custom paver stonework, roll-off dumpster rentals, mechanical beach cleaning, and winter snow plowing across 10 Connecticut Shoreline towns.
+          </p>
+          <div style="display: flex; gap: 0.5rem;">
+            <a href="tel:+18606626293" class="btn btn-call btn-sm">
+              <i data-lucide="phone"></i> (860) 662-6293
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Services Links -->
+        <div class="footer-col">
+          <h4>Our Services</h4>
+          <div class="footer-links">
+            <a href="dumpster-rentals.html">Roll-Off Dumpsters</a>
+            <a href="beach-cleaning.html">Shoreline Beach Cleaning</a>
+            <a href="stonework.html">Stonework & Paver Patios</a>
+            <a href="lawn-garden-care.html">Lawn & Garden Care</a>
+            <a href="lawn-maintenance.html">Lawn Maintenance</a>
+            <a href="spring-fall-cleanup.html">Spring & Fall Cleanups</a>
+            <a href="snow-ice-removal.html">Snow & Ice Removal</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Towns Served -->
+        <div class="footer-col">
+          <h4>Shoreline Towns</h4>
+          <div class="footer-links">
+            <a href="#services">Westbrook, CT</a>
+            <a href="#services">Clinton, CT</a>
+            <a href="#services">Madison, CT</a>
+            <a href="#services">Guilford, CT</a>
+            <a href="#services">Old Saybrook, CT</a>
+            <a href="#services">Killingworth, CT</a>
+            <a href="#services">Deep River, Essex, Chester</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Contact & Office -->
+        <div class="footer-col">
+          <h4>Office & Yard</h4>
+          <p style="font-size: 0.9rem; margin-bottom: 0.75rem;">
+            <strong style="color: #ffffff;">Giovanni Lawn Care LLC</strong><br>
+            196 Boston Post Rd<br>
+            Westbrook, CT 06498
+          </p>
+          <p style="font-size: 0.85rem; margin-bottom: 0.75rem;">
+            <strong>Phone / Text:</strong> <a href="tel:+18606626293" style="color: var(--accent-light);">(860) 662-6293</a><br>
+            <strong>Email:</strong> <a href="mailto:giovannilawncare@gmail.com" style="color: #ffffff;">giovannilawncare@gmail.com</a>
+          </p>
+          <p style="font-size: 0.825rem; color: var(--text-light);">
+            Mon–Sat: 8:00 AM – 5:00 PM<br>
+            24/7 Snow & Ice Storm Response
+          </p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2010–2026 Giovanni Lawn Care LLC. All Rights Reserved. Fully Licensed & Insured in CT.
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="why-choose-us.html">Why Choose Us</a>
+          <a href="#services">All Services</a>
+          <a href="#hero">Back to Top ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Call Button for Mobile Users -->
+  <a href="tel:+18606626293" class="floating-call-btn" id="floatingCallBtn" aria-label="Call Giovanni Lawn Care">
+    <i data-lucide="phone"></i> Call (860) 662-6293
+  </a>
+
+  <!-- Initialize Lucide Icons & Custom Script -->
+  <script>
+    lucide.createIcons();
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>
