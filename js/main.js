@@ -17,10 +17,64 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- 2. Mobile Navigation Toggle ---
   const mobileToggle = document.querySelector('.mobile-toggle');
-  const mobileNav = document.querySelector('.mobile-nav');
-  const mobileClose = document.querySelector('.mobile-nav-close');
-  const mobileBackdrop = document.querySelector('.mobile-nav-backdrop');
-  const mobileLinks = document.querySelectorAll('.mobile-nav-link, .mobile-services-list a');
+  let mobileNav = document.querySelector('.mobile-nav');
+  let mobileBackdrop = document.querySelector('.mobile-nav-backdrop');
+
+  // Auto-inject mobile drawer on subpages if not present in HTML
+  if (mobileToggle && !mobileNav) {
+    const quoteAnchor = document.getElementById('quoteSection') ? '#quoteSection' : '#contact';
+    mobileBackdrop = document.createElement('div');
+    mobileBackdrop.className = 'mobile-nav-backdrop';
+    mobileBackdrop.id = 'mobileBackdrop';
+
+    mobileNav = document.createElement('aside');
+    mobileNav.className = 'mobile-nav';
+    mobileNav.id = 'mobileNavDrawer';
+    mobileNav.setAttribute('aria-label', 'Mobile Navigation');
+    mobileNav.innerHTML = `
+      <div class="mobile-nav-header">
+        <img src="Images/LOGO-327x112-1-1.png" alt="Giovanni Lawn Care LLC Logo" style="height: 38px; width: auto;">
+        <button class="mobile-nav-close" aria-label="Close menu">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <nav class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <span class="mobile-nav-link" style="color: var(--primary); font-weight: 700;">Services</span>
+        <div class="mobile-services-list">
+          <a href="dumpster-rentals.html">🚛 Roll-Off Dumpster Rentals (Featured)</a>
+          <a href="beach-cleaning.html">🏖️ Shoreline & Municipal Beach Cleaning</a>
+          <a href="stonework.html">🧱 Stonework & Paver Patios</a>
+          <a href="lawn-garden-care.html">🌱 Lawn & Garden Care</a>
+          <a href="lawn-maintenance.html">✂️ Weekly Lawn Maintenance</a>
+          <a href="spring-fall-cleanup.html">🍂 Spring & Fall Cleanup</a>
+          <a href="snow-ice-removal.html">❄️ Snow & Ice Removal</a>
+        </div>
+        <a href="why-choose-us.html" class="mobile-nav-link" style="color: var(--primary); font-weight: 700;">⭐ Why Choose Us (Comparison)</a>
+        <a href="index.html#about" class="mobile-nav-link">About Giovanni</a>
+        <a href="index.html#work" class="mobile-nav-link">Before & After Work</a>
+        <a href="index.html#reviews" class="mobile-nav-link">Customer Reviews</a>
+        <a href="index.html#faq" class="mobile-nav-link">FAQs</a>
+        <a href="${quoteAnchor}" class="mobile-nav-link">Contact & Quote</a>
+      </nav>
+      <div class="mobile-nav-contact">
+        <a href="tel:+18606626293" class="btn btn-call" style="width: 100%;">
+          <i data-lucide="phone"></i> Call or Text (860) 662-6293
+        </a>
+        <a href="${quoteAnchor}" class="btn btn-primary mobile-nav-link" style="width: 100%; color: #ffffff;">
+          <i data-lucide="calendar"></i> Request Free Estimate
+        </a>
+      </div>
+    `;
+    document.body.appendChild(mobileBackdrop);
+    document.body.appendChild(mobileNav);
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
+  }
+
+  const mobileClose = document.querySelector('.mobile-nav-close, #mobileClose');
+  const mobileLinks = document.querySelectorAll('.mobile-nav-link, .mobile-services-list a, .mobile-links a, .mobile-nav .btn-primary');
 
   function openMobileNav() {
     mobileNav?.classList.add('open');
