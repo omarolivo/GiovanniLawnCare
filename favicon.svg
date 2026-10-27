@@ -1,21 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <defs>
-    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ef4444"/>
-      <stop offset="100%" stop-color="#b91c1c"/>
-    </linearGradient>
-    <filter id="softShadow" x="-10%" y="-10%" width="125%" height="125%">
-      <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#0f172a" flood-opacity="0.2"/>
-    </filter>
-  </defs>
-
-  <!-- Clean rounded badge for contrast on both dark and light browser tabs -->
-  <rect x="2" y="2" width="60" height="60" rx="14" fill="#ffffff" stroke="#173b2c" stroke-width="2.5" filter="url(#softShadow)"/>
-
-  <!-- Bold Red 'G' -->
-  <path d="M 44.5 21.5 C 41.5 16 36.5 13 31 13 C 20.5 13 13 21 13 32 C 13 43 20.5 51 31 51 C 40 51 46.5 44.5 47.8 36.5 L 31 36.5 L 31 29.5 L 54.5 29.5 C 54.8 31 55 32.8 55 34.5 C 55 47.5 44.5 58 31 58 C 16.5 58 6 46.5 6 32 C 6 17.5 16.5 6 31 6 C 39.5 6 47.5 10.5 51.5 17.5 L 44.5 21.5 Z" fill="url(#redGrad)"/>
-
-  <!-- Subtle Emerald Leaf Accent representing Lawn Care -->
-  <path d="M 45 13 C 51 11 55 15 54 21 C 48 23 44 19 45 13 Z" fill="#16a34a"/>
-  <path d="M 45 13 Q 48 18 54 21" stroke="#ffffff" stroke-width="0.75" fill="none" stroke-linecap="round"/>
+  <!-- Giovanni Red Letter 'G' from Logo (Transparent Background, Full Size) -->
+  <path d="M33.96 40.52V27.65H63.51V54.03Q55.02 59.82 48.50 61.91Q41.98 64.0 33.03 64.0Q22.01 64.0 15.07 60.24Q8.12 56.48 4.30 49.05Q0.48 41.62 0.48 32.0Q0.48 21.86 4.66 14.37Q8.84 6.88 16.90 2.99Q23.19 0.0 33.83 0.0Q44.09 0.0 49.18 1.85Q54.26 3.71 57.62 7.62Q60.98 11.52 62.67 17.51L44.22 20.81Q43.08 17.30 40.35 15.45Q37.63 13.59 33.41 13.59Q27.12 13.59 23.38 17.96Q19.65 22.33 19.65 31.78Q19.65 41.83 23.43 46.14Q27.20 50.44 33.96 50.44Q37.17 50.44 40.08 49.51Q42.99 48.59 46.75 46.35V40.52Z" fill="#de1f26"/>
 </svg>
