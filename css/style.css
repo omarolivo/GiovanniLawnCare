@@ -3005,13 +3005,18 @@ textarea.form-control {
     display: inline-block;
   }
 
-  .nav-menu,
-  .header-actions .btn-primary {
+  .nav-menu {
     display: none;
   }
 
   .mobile-toggle {
     display: flex;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-actions .btn-primary {
+    display: none;
   }
 }
 
