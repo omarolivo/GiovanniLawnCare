@@ -64,6 +64,13 @@
   --header-height: 80px;
 }
 
+/* --- Feature Toggle: Roll-Off Dumpster Rentals ---
+   Set body.hide-dumpsters (controlled via ENABLE_DUMPSTER_RENTALS in js/main.js)
+   to hide all dumpster rental sections, nav items, and options across the site. */
+body.hide-dumpsters .dumpster-feature {
+  display: none !important;
+}
+
 /* --- Base & Reset --- */
 *, *::before, *::after {
   box-sizing: border-box;

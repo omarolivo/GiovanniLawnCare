@@ -12,9 +12,9 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Giovanni Lawn Care LLC | Connecticut Shoreline Landscaping, Dumpsters & Beach Cleaning</title>
-  <meta name="description" content="Giovanni Lawn Care LLC provides 4-season property care across the CT Shoreline: lawn maintenance, paver patios & stonework, roll-off dumpster rentals, mechanical beach cleaning, cleanups, and winter snow removal. Call (860) 662-6293.">
-  <meta name="keywords" content="Giovanni Lawn Care, Westbrook CT landscaper, Clinton CT landscaping, Madison CT lawn care, shoreline beach cleaning Barber Surf Rake, dumpster rentals Westbrook CT, paver patios, snow removal">
+  <title>Giovanni Lawn Care LLC | Connecticut Shoreline Landscaping & Beach Cleaning</title>
+  <meta name="description" content="Giovanni Lawn Care LLC provides 4-season property care across the CT Shoreline: lawn maintenance, paver patios & stonework, mechanical beach cleaning, cleanups, and winter snow removal. Call (860) 662-6293.">
+  <meta name="keywords" content="Giovanni Lawn Care, Westbrook CT landscaper, Clinton CT landscaping, Madison CT lawn care, shoreline beach cleaning Barber Surf Rake, paver patios, snow removal">
   <link rel="canonical" href="https://giovannilawncare.com/">
 
   <!-- Favicon -->
@@ -71,7 +71,7 @@
   }
   </script>
 </head>
-<body>
+<body class="hide-dumpsters">
 
   <!-- ==========================================================================
        DYNAMIC SEASONAL ALERT BANNER
@@ -84,7 +84,7 @@
           <span class="seasonal-label" id="seasonalLabel">Fall Property Care</span>
         </span>
         <span class="seasonal-message" id="seasonalMessage">
-          Curbside Leaf Vacuuming, Yard Cleanups & Roll-Off Dumpster Rentals Filling Up Fast
+          Curbside Leaf Vacuuming, Yard Cleanups & Property Care Filling Up Fast
         </span>
         <a href="spring-fall-cleanup.html" class="seasonal-cta" id="seasonalCta">
           <span id="seasonalCtaText">Schedule Fall Cleanup</span>
@@ -154,7 +154,7 @@
               Services <i data-lucide="chevron-down"></i>
             </a>
             <div class="dropdown-menu">
-              <a href="dumpster-rentals.html" class="dropdown-link">
+              <a href="dumpster-rentals.html" class="dropdown-link dumpster-feature">
                 <span>Roll-Off Dumpster Rentals</span>
                 <span class="badge-featured">Popular</span>
               </a>
@@ -237,7 +237,7 @@
       <a href="index.html" class="mobile-nav-link active">Home</a>
       <span class="mobile-nav-link" style="color: var(--primary); font-weight: 700;">Services</span>
       <div class="mobile-services-list">
-        <a href="dumpster-rentals.html">🚛 Roll-Off Dumpster Rentals (Featured)</a>
+        <a href="dumpster-rentals.html" class="dumpster-feature">🚛 Roll-Off Dumpster Rentals (Featured)</a>
         <a href="beach-cleaning.html">🏖️ Shoreline Beach Cleaning (New)</a>
         <a href="stonework.html">🧱 Stonework & Paver Patios</a>
         <a href="lawn-garden-care.html">🌱 Lawn & Garden Care</a>
@@ -285,7 +285,7 @@
             </span>
             <h1 class="hero-title">A better yard starts right here.</h1>
             <p class="hero-desc">
-              From a beautifully kept lawn to a brand-new outdoor patio, Barber Surf Rake beach grooming, or roll-off dumpster rental, Giovanni Lawn Care brings dependable service and thoughtful craftsmanship to homes and businesses across Connecticut’s Shoreline.
+              From a beautifully kept lawn to a brand-new outdoor patio, Barber Surf Rake beach grooming, or seasonal cleanup, Giovanni Lawn Care brings dependable service and thoughtful craftsmanship to homes and businesses across Connecticut’s Shoreline.
             </p>
             <div class="hero-actions">
               <a href="tel:+18606626293" class="btn btn-call btn-lg">
@@ -300,7 +300,7 @@
       </article>
 
       <!-- Slide 2: Dumpster Rentals (High Priority SEO) -->
-      <article class="hero-slide" data-season="dumpsters">
+      <article class="hero-slide dumpster-feature" data-season="dumpsters">
         <img src="Images/Dumpster_Rentals_Truck_Trailer_01.jpg" alt="Giovanni Lawn Care hooklift dumpster truck on Connecticut shoreline road" class="hero-bg-img">
         <div class="hero-overlay"></div>
         <div class="container">
@@ -460,7 +460,7 @@
           </div>
           <div class="season-pills">
             <button class="season-pill active" data-season="overview">Overview</button>
-            <button class="season-pill" data-season="dumpsters">🚛 Dumpsters</button>
+            <button class="season-pill dumpster-feature" data-season="dumpsters">🚛 Dumpsters</button>
             <button class="season-pill" data-season="beach">🏖️ Beach Cleaning</button>
             <button class="season-pill" data-season="stonework">🧱 Stonework</button>
             <button class="season-pill" data-season="lawn">🌱 Lawn & Garden</button>
@@ -497,7 +497,7 @@
         <div class="stat-item">
           <div class="stat-icon"><i data-lucide="layers"></i></div>
           <div class="stat-info">
-            <div class="stat-number" data-target="7" data-suffix=" Core">7 Core</div>
+            <div class="stat-number" data-target="6" data-suffix=" Core" id="coreServicesStat">6 Core</div>
             <div class="stat-title">Outdoor Services</div>
             <div class="stat-desc">Complete four-season property care for residential & commercial</div>
           </div>
@@ -613,7 +613,7 @@
         </article>
 
         <!-- 04: Dumpster Rentals (Featured) -->
-        <article class="service-card" style="border: 2px solid var(--accent); box-shadow: var(--shadow-lg);">
+        <article class="service-card dumpster-feature" style="border: 2px solid var(--accent); box-shadow: var(--shadow-lg);">
           <div class="service-card-img-wrap">
             <span class="service-num">04</span>
             <span class="service-card-badge badge-new-service">High Demand</span>
@@ -641,7 +641,7 @@
         <!-- 05: Beach Cleaning (Featured) -->
         <article class="service-card" style="border: 2px solid #0284c7; box-shadow: var(--shadow-lg);">
           <div class="service-card-img-wrap">
-            <span class="service-num">05</span>
+            <span class="service-num">04</span>
             <span class="service-card-badge" style="background: #0284c7;">New Service</span>
             <img src="Images/Beach_Cleaning_Barber_Surf_Rake_Equipment.jpeg" alt="Barber Surf Rake Beach Cleaning equipment" class="service-card-img" loading="lazy">
           </div>
@@ -667,7 +667,7 @@
         <!-- 06: Spring & Fall Cleanup -->
         <article class="service-card">
           <div class="service-card-img-wrap">
-            <span class="service-num">06</span>
+            <span class="service-num">05</span>
             <img src="Images/leaf_blower.jpg" alt="Commercial leaf cleanup with high-powered leaf blower" class="service-card-img" loading="lazy">
           </div>
           <div class="service-card-body">
@@ -692,7 +692,7 @@
         <!-- 07: Snow & Ice Removal -->
         <article class="service-card">
           <div class="service-card-img-wrap">
-            <span class="service-num">07</span>
+            <span class="service-num">06</span>
             <img src="Images/unnamed-1-scaled.jpg" alt="Giovanni crew snowblowing driveway with plow truck" class="service-card-img" loading="lazy">
           </div>
           <div class="service-card-body">
@@ -721,7 +721,7 @@
   <!-- ==========================================================================
        FEATURE SPOTLIGHT 1: ROLL-OFF DUMPSTER RENTALS
        ========================================================================== -->
-  <section class="feature-spotlight" id="dumpsters-spotlight">
+  <section class="feature-spotlight dumpster-feature" id="dumpsters-spotlight">
     <div class="container">
       <div class="spotlight-grid">
         <div class="spotlight-images">
@@ -835,10 +835,10 @@
               </div>
             </div>
             <div class="step-card">
-              <span class="step-badge" style="color: #0284c7; background: #e0f2fe;">Dual</span>
+              <span class="step-badge" style="color: #0284c7; background: #e0f2fe;">Haul</span>
               <div class="step-info">
-                <h4>Dumpster Support Included</h4>
-                <p>We own our roll-off dumpsters, meaning massive storm debris loads are hauled off immediately.</p>
+                <h4>Complete Debris Haul-Away</h4>
+                <p>Massive storm seaweed and beach debris loads are collected and hauled off cleanly and immediately.</p>
               </div>
             </div>
           </div>
@@ -982,7 +982,7 @@
         <button class="filter-btn active" data-filter="all">All Projects</button>
         <button class="filter-btn" data-filter="stonework">Stonework & Patios</button>
         <button class="filter-btn" data-filter="lawn">Lawns & Hydroseeding</button>
-        <button class="filter-btn" data-filter="dumpsters">Dumpsters & Cleanups</button>
+        <button class="filter-btn" data-filter="dumpsters">Seasonal Cleanups</button>
         <button class="filter-btn" data-filter="beach">Beach Cleaning</button>
         <button class="filter-btn" data-filter="winter">Snow Removal</button>
       </div>
@@ -1063,7 +1063,7 @@
         </div>
 
         <!-- 9: Hooklift Dumpster Truck Delivery -->
-        <div class="gallery-item" data-category="dumpsters">
+        <div class="gallery-item dumpster-feature" data-category="dumpsters">
           <img src="Images/Dumpster_Rentals_Truck_Trailer_01.jpg" alt="Giovanni Hooklift Truck Carrying Dumpster Container" class="gallery-thumb" loading="lazy">
           <div class="gallery-overlay">
             <span class="gallery-category">Dumpsters & Cleanups</span>
@@ -1075,7 +1075,7 @@
         <div class="gallery-item" data-category="dumpsters">
           <img src="Images/IMG_1567-Medium-1024x738-1.jpg" alt="Leaf Vacuum Truck for Fall Cleanup" class="gallery-thumb" loading="lazy">
           <div class="gallery-overlay">
-            <span class="gallery-category">Dumpsters & Cleanups</span>
+            <span class="gallery-category">Seasonal Cleanups</span>
             <div class="gallery-item-title">Commercial Leaf Vacuum Loader</div>
           </div>
         </div>
@@ -1266,7 +1266,7 @@
         </article>
 
         <!-- Review 6: Thomas C. (Roll-Off Dumpsters) -->
-        <article class="review-card">
+        <article class="review-card dumpster-feature">
           <div class="review-header">
             <div class="review-stars">★★★★★</div>
             <span class="google-badge-tag">
@@ -1383,7 +1383,7 @@
         <span class="section-label">Common Inquiries</span>
         <h2 class="section-title">Frequently Asked Questions</h2>
         <p class="section-desc">
-          Everything you need to know about our services, estimates, crew, equipment, and dumpster policies.
+          Everything you need to know about our services, estimates, crew, and commercial equipment.
         </p>
       </div>
 
@@ -1442,7 +1442,7 @@
         </div>
 
         <!-- FAQ 5 -->
-        <div class="faq-item">
+        <div class="faq-item dumpster-feature">
           <button class="faq-question">
             <span>What sizes are your dumpsters and what can I put in them?</span>
             <i data-lucide="chevron-down"></i>
@@ -1462,7 +1462,7 @@
           </button>
           <div class="faq-answer">
             <p>
-              Yes! Giovanni Lawn Care LLC is fully licensed and insured for residential and commercial landscaping, hardscaping, snow removal, and roll-off dumpster services in Connecticut.
+              Yes! Giovanni Lawn Care LLC is fully licensed and insured for residential and commercial landscaping, hardscaping, beach cleaning, and snow removal services in Connecticut.
             </p>
           </div>
         </div>
@@ -1593,7 +1593,7 @@
               <label class="form-label" for="userService">Service Needed *</label>
               <select id="userService" name="service" class="form-control" required>
                 <option value="" disabled selected>Select Primary Service</option>
-                <optgroup label="Roll-Off Dumpsters (Available Sizes)">
+                <optgroup label="Roll-Off Dumpsters (Available Sizes)" class="dumpster-feature">
                   <option value="12-Yard Dumpster Rental">12-Yard Dumpster (Small Cleanouts & Yard Waste)</option>
                   <option value="15-Yard Dumpster Rental">15-Yard Dumpster (Medium Remodels & Cleanouts)</option>
                   <option value="20-Yard Dumpster Rental">20-Yard Dumpster (Most Popular - Multi-Room & Renovations)</option>
@@ -1640,7 +1640,7 @@
         <div class="footer-col">
           <img src="Images/LOGO-327x112-1-1.png" alt="Giovanni Lawn Care LLC Logo" style="height: 50px; width: auto; margin-bottom: 1.25rem; background: #ffffff; padding: 6px 12px; border-radius: var(--radius-sm);">
           <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem;">
-            Established in 2010 by Giovanni Sanchez. Providing dependable property care, custom paver stonework, roll-off dumpster rentals, mechanical beach cleaning, and winter snow plowing across 10 Connecticut Shoreline towns.
+            Established in 2010 by Giovanni Sanchez. Providing dependable property care, custom paver stonework, mechanical beach cleaning, and winter snow plowing across 10 Connecticut Shoreline towns.
           </p>
           <div style="display: flex; gap: 0.5rem;">
             <a href="tel:+18606626293" class="btn btn-call btn-sm">
@@ -1653,7 +1653,7 @@
         <div class="footer-col">
           <h4>Our Services</h4>
           <div class="footer-links">
-            <a href="dumpster-rentals.html">Roll-Off Dumpsters</a>
+            <a href="dumpster-rentals.html" class="dumpster-feature">Roll-Off Dumpsters</a>
             <a href="beach-cleaning.html">Shoreline Beach Cleaning</a>
             <a href="stonework.html">Stonework & Paver Patios</a>
             <a href="lawn-garden-care.html">Lawn & Garden Care</a>

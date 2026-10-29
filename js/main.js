@@ -4,7 +4,34 @@
    Filter Gallery, FAQ Accordion, Mobile Drawer, and Quote Form Validation
    ========================================================================== */
 
+// --- FEATURE TOGGLE: ROLL-OFF DUMPSTER RENTALS ---
+// Set to `true` to restore Roll-Off Dumpster Rentals across the home page and Services menus.
+// Set to `false` to temporarily hide all Dumpster Rental sections, slides, cards, and links.
+const ENABLE_DUMPSTER_RENTALS = false;
+
 document.addEventListener('DOMContentLoaded', () => {
+  // Apply Dumpster Rentals feature toggle
+  if (ENABLE_DUMPSTER_RENTALS) {
+    document.body.classList.remove('hide-dumpsters');
+    // Renumber service cards on homepage if dumpsters are shown (01 to 07)
+    const serviceCards = document.querySelectorAll('#services .service-card');
+    serviceCards.forEach((card, idx) => {
+      const numEl = card.querySelector('.service-num');
+      if (numEl) numEl.textContent = String(idx + 1).padStart(2, '0');
+    });
+    const coreStat = document.getElementById('coreServicesStat');
+    if (coreStat) {
+      coreStat.setAttribute('data-target', '7');
+      coreStat.textContent = '7 Core';
+    }
+  } else {
+    document.body.classList.add('hide-dumpsters');
+    // Disable hidden optgroups in select dropdowns so browsers don't display them
+    document.querySelectorAll('optgroup.dumpster-feature, option.dumpster-feature').forEach(el => {
+      el.disabled = true;
+      el.hidden = true;
+    });
+  }
   // --- 1. Sticky Header Shadow on Scroll ---
   const header = document.querySelector('.main-header');
   window.addEventListener('scroll', () => {
@@ -42,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <a href="index.html" class="mobile-nav-link">Home</a>
         <span class="mobile-nav-link" style="color: var(--primary); font-weight: 700;">Services</span>
         <div class="mobile-services-list">
-          <a href="dumpster-rentals.html">🚛 Roll-Off Dumpster Rentals (Featured)</a>
+          <a href="dumpster-rentals.html" class="dumpster-feature">🚛 Roll-Off Dumpster Rentals (Featured)</a>
           <a href="beach-cleaning.html">🏖️ Shoreline & Municipal Beach Cleaning</a>
           <a href="stonework.html">🧱 Stonework & Paver Patios</a>
           <a href="lawn-garden-care.html">🌱 Lawn & Garden Care</a>
@@ -96,8 +123,8 @@ document.addEventListener('DOMContentLoaded', () => {
   mobileLinks.forEach(link => link.addEventListener('click', closeMobileNav));
 
   // --- 3. Homepage Seasonal Hero Slider ---
-  const slides = document.querySelectorAll('.hero-slide');
-  const seasonPills = document.querySelectorAll('.season-pill');
+  const slides = document.querySelectorAll('.hero-slide:not(.dumpster-feature)' + (ENABLE_DUMPSTER_RENTALS ? ', .hero-slide.dumpster-feature' : ''));
+  const seasonPills = document.querySelectorAll('.season-pill:not(.dumpster-feature)' + (ENABLE_DUMPSTER_RENTALS ? ', .season-pill.dumpster-feature' : ''));
   const prevBtn = document.querySelector('.slider-prev');
   const nextBtn = document.querySelector('.slider-next');
   let currentSlide = 0;
@@ -217,7 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- 5. Gallery Filter Tabs ---
   const filterBtns = document.querySelectorAll('.filter-btn');
-  const galleryItems = document.querySelectorAll('.gallery-item');
+  const galleryItems = document.querySelectorAll('.gallery-item:not(.dumpster-feature)' + (ENABLE_DUMPSTER_RENTALS ? ', .gallery-item.dumpster-feature' : ''));
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -530,7 +557,9 @@ document.addEventListener('DOMContentLoaded', () => {
         themeClass: 'season-fall',
         icon: '🍂',
         label: 'Fall Property Care',
-        message: 'Curbside Leaf Vacuuming, Yard Cleanups & Dumpster Rentals Filling Up Fast',
+        message: ENABLE_DUMPSTER_RENTALS
+          ? 'Curbside Leaf Vacuuming, Yard Cleanups & Dumpster Rentals Filling Up Fast'
+          : 'Curbside Leaf Vacuuming, Yard Cleanups & Property Care Filling Up Fast',
         ctaText: 'Schedule Fall Cleanup',
         ctaHref: 'spring-fall-cleanup.html'
       },

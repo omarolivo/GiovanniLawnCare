@@ -30,7 +30,7 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body>
+<body class="hide-dumpsters">
 
   <!-- ==========================================================================
        DYNAMIC SEASONAL ALERT BANNER
@@ -98,7 +98,7 @@
           <li class="nav-item">
             <a href="index.html#services" class="nav-link">Services <i data-lucide="chevron-down"></i></a>
             <div class="dropdown-menu">
-              <a href="dumpster-rentals.html" class="dropdown-link">
+              <a href="dumpster-rentals.html" class="dropdown-link dumpster-feature">
                 <span>Roll-Off Dumpster Rentals</span>
                 <span class="badge-featured">12-25 Yd</span>
               </a>
@@ -151,7 +151,7 @@
     </div>
     <ul class="mobile-links" style="list-style:none; padding:0; display:flex; flex-direction:column; gap:1rem;">
       <li><a href="index.html" class="nav-link">Home</a></li>
-      <li><a href="dumpster-rentals.html" class="nav-link">Dumpster Rentals (12–25 Yd)</a></li>
+      <li class="dumpster-feature"><a href="dumpster-rentals.html" class="nav-link">Dumpster Rentals (12–25 Yd)</a></li>
       <li><a href="beach-cleaning.html" class="nav-link">Shoreline Beach Cleaning</a></li>
       <li><a href="stonework.html" class="nav-link">Stonework & Patios</a></li>
       <li><a href="lawn-garden-care.html" class="nav-link">Lawn & Garden Care</a></li>
@@ -285,7 +285,7 @@
             </tr>
 
             <!-- 3: Roll-Off Dumpster Capacity -->
-            <tr>
+            <tr class="dumpster-feature">
               <td>
                 <div class="compare-criteria-title">
                   <i data-lucide="truck" style="width: 18px; height: 18px; color: var(--primary);"></i>
@@ -716,7 +716,7 @@
             <label class="form-label" for="userService">Service You Need *</label>
             <select id="userService" name="service" class="form-control" required>
               <option value="" disabled selected>Select Service</option>
-              <optgroup label="Dumpster Rentals">
+              <optgroup label="Dumpster Rentals" class="dumpster-feature">
                 <option value="12-Yard Dumpster Rental">12-Yard Dumpster Rental</option>
                 <option value="15-Yard Dumpster Rental">15-Yard Dumpster Rental</option>
                 <option value="20-Yard Dumpster Rental">20-Yard Dumpster Rental (Most Popular)</option>
@@ -765,7 +765,7 @@
         <div class="footer-col">
           <h4>Services</h4>
           <ul class="footer-links">
-            <li><a href="dumpster-rentals.html">Roll-Off Dumpsters (12–25 Yd)</a></li>
+            <li class="dumpster-feature"><a href="dumpster-rentals.html">Roll-Off Dumpsters (12–25 Yd)</a></li>
             <li><a href="beach-cleaning.html">Shoreline Beach Cleaning</a></li>
             <li><a href="stonework.html">Stonework & Pavers</a></li>
             <li><a href="lawn-garden-care.html">Lawn & Garden Care</a></li>
